@@ -3,12 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
+    <title>FoodSta</title>
+
+    <!--Link Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Kalam&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Link Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <!-- Our CSS -->
     <link rel="stylesheet" href="./sass/index.scss" />
+
     <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <!-- Section Header -->
+    <include src="./partials/header.html"></include>
+
+    <main>
+      <!-- Section Hero -->
+      <include src="./partials/hero.html"></include>
+
+      <!-- Section Offerings -->
+      <include src="./partials/offerings.html"></include>
+
+      <!-- Section Favorites -->
+      <include src="./partials/favorites.html"></include>
+
+      <!-- Section Customers Say -->
+      <include src="./partials/customers.html"></include>
+
+      <!-- Section Subscribe -->
+      <include src="./partials/subscribe.html"></include>
+    </main>
+
+    <!-- Section Footer -->
+    <include src="./partials/footer.html"></include>
+
+    <!-- Inclode modal window -->
+    <include src="./partials/modal.html"></include>
+
+    <!-- include JS scripts -->
+    <include src="./partials/scripts.html"></include>
   </body>
 </html>
