@@ -37,5 +37,9 @@
   --padding-v-desk: 16px;
   --padding-v-tab: 32px;
   --padding-v-mob: 20px;
+
+  // Animations
+  --duration-primary: 250ms;
+  --timing-function-primary: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
