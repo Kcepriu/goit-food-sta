@@ -1,8 +1,6 @@
 body {
-  // font-family: roboto, sans-serif;
-  // letter-spacing: 0.03em;
-
-  // color: getColor('text-primary');
+  font-family: roboto, sans-serif;
+  color: var(--text-color-primary);
 }
 
 h1,
@@ -16,6 +14,12 @@ p {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+.no-scroll {
+  overflow: hidden;
+  overflow-y: hidden;
+}
+
 
 // * {
 //   outline: 1px solid red;
