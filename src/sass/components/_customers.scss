@@ -1,0 +1,13 @@
+.customers {
+
+}
+.container{}
+
+.customers__title{}
+
+.customers__text{}
+
+.customers__list {
+    @include list();
+}
+.customers__item {}
