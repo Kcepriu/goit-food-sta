@@ -1,20 +1,32 @@
-.customers {
-
-}
+.customers {background-color: var(--background-yellow)}
 .container{
     @include container();
 }
 
-.customers__title{}
+.customers__title{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 28px;
+line-height: 1.17;
+color: var(--text-color-primary);
+}
 
-.customers__text{}
+.customers__text{
+font-weight: 400;
+font-size: 14px;
+line-height: 1.14;
+color: var(--text-color-primary);
+}
 
 .customers__list {
     @include list();
-}
-.customers__item {}
-
-.customers__item--text {
-
+    background-color: var(--background-primary);
+    
 }
 
+.customers__list--icon {
+    fill:yellow;
+    display: flex;
+
+}
