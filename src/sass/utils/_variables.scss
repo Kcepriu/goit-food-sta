@@ -1,8 +1,41 @@
 :root {
+  // Color TEXT
+  --text-color-primary: #2C2C2C;
+  --text-color-accent: #BBF330;;
+  --text-color-placeholder: #505050;
+  --text-color-link: #7EB101;
+  --text-color-menu: #000000;
+
+  --error-color: #FF705D;
+
+
+  // color BTN
+  --bnt-background-green: #BBF330;
+  --bnt-background-green-acent: #B5FF00;
+  
+  --bnt-background-white: #FFFFFF;
+  --bnt-background-yellow: #FFE550;
+  
+  --btn-border: #7EB101;
+  --btn-border-acent: #597D00;
+
+  
+  //Color Background
+  --background-primary: #FFFFFF;
+  --background-second:  ##FEFEFE;
   --background-yellow: #FFE550;
+
+  --background-circles: #FEFEFE;
+
+  // box-shadow
+  --box-shadow-header: 0px 4px 24px rgba(105, 105, 105, 0.1);
+  --box-shadow-footer: 0px -4px 24px rgba(105, 105, 105, 0.1);
+  
   --swiper-navigation-size: 40px;
 
+  // Paddings
   --padding-v-desk: 16px;
   --padding-v-tab: 32px;
   --padding-v-mob: 20px;
 }
+

@@ -1,0 +1,27 @@
+@mixin container() {
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: var(--padding-v-mob);
+  padding-right: var(--padding-v-mob);
+
+
+  width: 100%;
+
+
+  @include mq(mob) {
+    max-width: $mobile;
+  }
+
+  @include mq(tab) {
+    max-width: $tablet;
+    padding-left: var(--padding-v-tab);
+    padding-right: var(--padding-v-tab);
+  }
+
+  @include mq(desk) {
+    max-width: $desktop;
+    padding-left: var(--padding-v-desk);
+    padding-right: var(--padding-v-desk);
+  }
+}
