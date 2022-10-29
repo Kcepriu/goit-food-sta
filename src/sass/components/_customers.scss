@@ -1,7 +1,9 @@
 .customers {
 
 }
-.container{}
+.container{
+    @include container();
+}
 
 .customers__title{}
 
@@ -11,3 +13,8 @@
     @include list();
 }
 .customers__item {}
+
+.customers__item--text {
+
+}
+
