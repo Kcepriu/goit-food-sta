@@ -1,1 +1,27 @@
 <p>subscribe</p>
+
+    <div class="subscribe">
+        <img 
+        srcset="./images/banana.jpg 270w,
+        ./images/banana_tab.jpg 354w,
+        ./images/banana_desk.jpg 450w"
+        sizes="(min-width:1280px) 450px, (min-width:767px) 354px,270px"
+        src="./images/banana.jpg" 
+        alt="Banana" class="subscribe__img">
+    <h3 class="subscribe__title"> Subscribe To Get Special Offers</h3>
+<p class="subscribe__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim 
+    in eros elementum tristique.</p>
+<form class="subscribe__form">
+    <label for="email"></label>
+    <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}" name="email" id="email" class="subscribe__input"  placeholder="Enter your email" req>
+    <div class="form-error">
+        <!-- <svg height="12" width="12">
+            <use href="./images/group.svg"></use>
+        </svg> -->
+        <img class="form-error__img" src="./images/frame.jpg" alt="error">
+        <p class="form-error__text">Not a valid email address (example@email.com)</p>
+    </div>
+    <button class="subscribe__button">Subscribe</button>
+    
+</form> 
+</div>

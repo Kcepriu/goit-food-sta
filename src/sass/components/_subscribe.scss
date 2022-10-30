@@ -1,0 +1,124 @@
+.subscribe{
+    @include container;
+
+}
+.subscribe__title{
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.2;
+    padding-bottom: 20px;
+    @include mq(mob-only){
+        font-size: 28px;
+    }
+    @include mq(desk){
+        padding-top: 40px;
+    }
+}
+.subscribe__img{
+    display: block;
+    padding-bottom: 20px;
+    @include mq(mob-only){
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include mq(tab-only){
+        margin-left: auto;
+    }
+    @include mq(desk){
+        float: right;
+        height: 266px;
+        padding-bottom: 0;
+    }
+}
+.subscribe__text{
+    line-height: 1.5;
+    padding-bottom: 40px;
+    @include mq(mob-only){
+        font-size: 14px;
+    }
+    @include mq(tab-only){
+        font-size: 16px;
+    }
+    @include mq(desk){
+        padding-bottom: 24px;
+        width: 656px;
+    }
+}
+.subscribe__form{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-error{
+    position: absolute;
+    display: flex;
+    opacity: 0;
+    top: 45px;
+    left: 5px;   
+}
+.form-error__img{
+    height: 12px;
+    width: 12px;
+    margin-right: 4px;
+}
+.form-error__text{
+    font-size: 10px;
+    line-height: 1.5;
+    color: var(--error-color);
+}
+.subscribe__input{
+    font-size: 12px;
+    line-height: 150%;
+    height: 42px;
+    width:394px;
+    padding-left: 11px;
+    border: 0.854167px solid #FFE550;
+border-radius: 30px;
+@include mq(mob-only) {
+    width: 100vw;  
+}
+
+&:invalid{
+    border: 0.854167px solid #FF705D;
+    & + .form-error{
+        opacity: 1;
+    }
+}
+
+&:valid{
+    border: 0.854167px solid #7EB101;
+}
+
+}
+
+.subscribe__button{
+    display: block;
+    padding: 11px 22px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text-color-primary);
+    background-color: var(--bnt-background-green);
+    border: none;
+    border-radius: 30px;
+    @include mq(mob-only){
+        margin-top: 20px;
+        margin-left: auto;
+    }
+    @include mq(tab-only){
+        margin-left: 22px;
+    }
+    @include mq(desk){
+        margin-left: 32px;
+    }
+}
+.subscribe__button:hover,
+.subscribe__button:focus{
+    background-color: var(--bnt-background-green-acent);
+}
+
+
+
+
+
+
