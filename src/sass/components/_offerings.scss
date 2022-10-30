@@ -1,0 +1,240 @@
+.offerings {
+    width: 100%;
+    background-image: url(/src/images/offerings/bcg/rectangle-mob.jpg);
+    background-size: cover;
+    margin: 0 auto;
+    padding-bottom: 100px;
+
+    @include mq(tab) {
+        background-image: url(/src/images/offerings/bcg/rectangle-tabl.jpg);
+    }
+
+    @include mq(desk) {
+        background-image: url(/src/images/offerings/bcg/rectangle-desk.jpg);
+        padding-bottom: 0;
+    }
+}
+
+.offerings, 
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--padding-v-mob);
+    padding-right: var(--padding-v-mob);
+
+    @include mq(tab){
+        padding-left: var(--padding-v-tab);
+        padding-right: var(--padding-v-tab);
+    }
+
+    @include mq(desk) {
+        display: flex;
+        padding-top: 70px;
+        padding-bottom: 43px;
+        padding-left: var(--padding-v-desk);
+        padding-right: var(--padding-v-desk);
+    }
+}
+
+.offerings__img {
+    margin-top: 50px;
+
+    @include mq(desk) {
+        margin-top: 70px;
+    }
+}
+
+.offerings__apple--mobile {
+    display: block;
+    width: 100%;
+
+    @include mq(tab) {
+        display: none;
+    }
+}
+
+.offerings__apple--tabl {
+
+    @include mq(tab) {
+        display: block;
+        padding-top: 115px;
+    }
+
+    @include mq(desk) {
+        display: none;
+    }
+}
+
+.offerings__apple--tablet {
+    display: none;
+
+    @include mq(tab) {
+        display: block;
+    }
+
+    @include mq(desk) {
+        display: none;
+    }
+}
+
+.offerings__apple--desktop {
+    display: none;
+
+    @include mq(desk) {
+        display: block;
+    }
+}
+
+.offerings__wrap {
+
+    @include mq(tab) {
+        max-width: 620px;
+    }
+
+    @include mq(desk) {
+        max-width: 573px;
+        margin-top: 99px;
+        margin-left: 90px;
+        margin-right: 0;
+    }
+}
+
+.offerings__title {
+    max-width: 280px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    color: var(--text-color-primary);
+    margin-top: 60px;
+    margin-bottom: 28px;
+
+    @include mq(tab) {
+        max-width: 526px;
+        font-size: 42px;
+        line-height: 1.16;
+        margin-bottom: 20px;
+    }
+
+    @include mq(desk) {
+        line-height: 1.2;
+    }
+}
+
+.offerings__text {
+    max-width: 272px;
+    font-size: 14px;
+    line-height: 1.14;
+    color: var(--text-color-primary);
+
+    @include mq(tab) {
+        max-width: 500px;
+        font-size: 16px;
+        line-height: 1.18;
+        margin-bottom: 40px;
+    }
+    
+    @include mq(desk) {
+        line-height: 1.5;
+    }
+}
+
+.offerings__list {
+    list-style: none;
+    padding: 0;
+
+    @include mq(tab) {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    @include mq(desk) {
+        list-style: none;
+        padding: 0;
+    }
+}
+
+.offerings__item:not(:last-child) {
+    margin-right: 67px;
+}
+
+.offerings__icon {
+    border-radius: 50%;
+    background-color: var(--background-primary);
+    margin-top: 28px;
+
+    @include mq(tab) {
+        margin-top: 0;
+    }
+}
+
+.offerings__pretitle {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--text-color-primary);
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.offerings__pretext {
+    max-width: 252px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-color-primary);
+
+    @include mq(tab) {
+        margin: 0;
+    }
+    
+    @include mq(desk) {
+        margin-right: 0;
+        max-width: 253px;
+    }
+}
+
+.offerings__btn {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: right;
+    color: var(--text-color-primary);
+    padding: 10px 22px;
+    background: var(--bnt-background-white);
+    border: 2px solid var(--text-color-link);
+    border-radius: 30px;
+    margin-top: 28px;
+    
+    @include mq(tab) {
+        margin-top: 40px;
+    }
+    
+    @include mq(desk) {
+        margin-top: 32px;
+    }
+}
+
+.offerings__btn:hover,
+.offerings__btn:focus {
+    border: 2px solid var(--btn-border-acent);
+    border-radius: 30px;
+}
+
+.offerings__button {
+    position: relative;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text-color-menu);  
+    padding: 7px 17px 7px 0; 
+    justify-content: center;
+    border: none;
+    background: var(--bnt-background-yellow);
+    margin-left: 24px;
+
+    @include mq(desk) {
+        display: none;
+    }
+}
+
+.offerings__vector {
+    position: absolute;
+}
