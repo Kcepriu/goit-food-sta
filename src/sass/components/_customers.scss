@@ -4,7 +4,7 @@
     background-color: #FFE550;
     // background-image: url(../images/customers/Rectangle\ 701.jpg)
 
-    @include mq(tab) {
+    @include mq(desk) {
        padding-top: 100px;
        padding-bottom: 134px
       }
