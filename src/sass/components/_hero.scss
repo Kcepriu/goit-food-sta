@@ -1,0 +1,54 @@
+.hero{
+  
+    @media screen and (min-width: 768px)
+    {
+    display: flex;   
+    min-width: 0; 
+    }
+    
+
+    &__title {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 1.17;
+        color: var(--text-color-primary);
+
+        @media screen and (max-width: 767px)
+        {
+            text-align: center;
+            margin-bottom: 28px; 
+         
+        }
+        
+
+    }
+    &__text{
+        font-size: 14px;
+        line-height: 1.5;
+
+        color: var(--text-color-primary);
+       
+        @media screen and (max-width: 767px)
+        {
+            text-align: center;
+            margin-bottom: 28px; 
+        }
+        
+    }
+    &__btn {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 1.5;
+        background-color: var(--bnt-background-green);
+        padding: 6px 18px;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+     }
+     &__btn:active {
+        background-color: var(--bnt-background-green-acent);
+     }
+
+
+
+}
