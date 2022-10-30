@@ -77,18 +77,15 @@ border-radius: 30px;
 @include mq(mob-only) {
     width: 100vw;  
 }
-
+&:not(:placeholder-shown):valid{
+    border: 0.854167px solid #7EB101;
+}
 &:invalid{
     border: 0.854167px solid #FF705D;
     & + .form-error{
         opacity: 1;
     }
 }
-
-&:valid{
-    border: 0.854167px solid #7EB101;
-}
-
 }
 
 .subscribe__button{
