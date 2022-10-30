@@ -50,7 +50,7 @@ line-height: 1.18;
     padding: 8px;
     @include mq(tab) {padding: 12px;}
     @include mq(desk){width: 500px;
-    padding: 12px;}
+    padding: 14px;}
 }
 .customers__item:not(:last-child){margin-bottom: 24px;
     @include mq(tab) {
