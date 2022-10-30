@@ -1,1 +1,79 @@
-<p>header</p>
+<body class="body">
+<header class="header">
+    <div class="container">
+        <div class="header__logo">
+            <a lang="en"href="">
+            <img class="header__logo-img" src="./images/logo.png" alt="logo">
+            </a>
+        </div>
+        <nav class="navigation">
+            <ul class="navigation__list list">
+              <li class="navigation__item">
+                <a href="" class="navigation__link current">Home</a>
+              </li>
+              <li class="navigation__item">
+                <a href="" class="navigation__link ">About</a>
+              </li>
+              <li class="navigation__item">
+                <a href="" class="navigation__link ">Service</a>
+              </li>
+              <li class="navigation__item">
+                <a href="" class="navigation__link ">Menu</a>
+              </li>
+              <li class="navigation__item">
+                <a href="" class="navigation__link ">Contact</a>
+              </li>
+              <li>
+                <button type="button" class="navigation__btn" data-modal-open> Order Now</button>
+              </li>
+            </ul>
+          </nav>
+        <button
+             type="button"
+             class="menu-button pointer"
+             aria-expanded="false"
+             aria-controls="menu"
+             data-menu-button >
+          <svg
+             class="menu-burger"
+             width="40px"
+             height="40px"
+             aria-label="Переключатель мобильного меню">
+          <use
+              class="menu-icon-burger"
+              href="/src/images/icons.svg#icon-menu-burger">
+             </use>
+          <use
+              class="menu-icon-cross"
+              href="/src/images/icons.svg#icon-menu-closer">
+            </use>
+        </svg>
+        </button>
+    </div> 
+    <div class="menu" id="menu" data-menu >
+        <nav class="menu__container">
+            <ul class="menu__list">
+              <li class="menu__item"> 
+                <a href="#hero" class="menu__link ">Hero</a>
+              </li>
+              <li class="menu__item">
+                 <a href="#Offerings" class="menu__link">Offerings</a>
+              </li>
+              <li class="menu__item">
+                 <a href="#Favorites" class="menu__link">Favorites</a>
+              </li>
+              <li class="menu__item">
+                <a href="#Customers" class="menu__link">Customers</a>
+              </li>
+              <li class="menu__item">
+                <a href="#Subscribe" class="menu__link">Subscribe</a>
+              </li>
+              <li class="menu__item">
+                <a href="#Footer" class="menu__link">Footer</a>
+              </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+</body>
+<script src="./index.js"></script>
