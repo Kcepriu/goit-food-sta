@@ -66,13 +66,7 @@ p {
 }
 
 .footer {
-  background-image: url("../images/footer/background-footer-mob-480w.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
 }
 .footer__text {
   font-size: 10px;
@@ -81,10 +75,22 @@ p {
   text-align: center;
 }
 
-.footer__shadow {
-  box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
+.footer-container {
+  background-image: url("../images/footer/background-footer-mob-480w.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .footer-container {
+    background-image: url("../images/footer/background-footer-mob-960w.png");
+  }
+}
 .footer-logo-nav__container {
   display: flex;
   margin-bottom: 40px;
@@ -97,7 +103,8 @@ p {
 }
 
 .footer-nav {
-  margin-left: 180px;
+  margin-left: auto;
+  margin-right: 84px;
 }
 .footer-nav__list {
   padding: 0;
@@ -128,12 +135,14 @@ p {
   font-size: 10px;
   line-height: 1.5;
 }
-.footer-form__text {
+.footer-form__label {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 12px;
   color: var(--text-color-primary);
+  display: block;
+  cursor: pointer;
 }
 .footer-form__input {
   border: 0.854167px solid var(--bnt-background-yellow);
@@ -190,14 +199,12 @@ p {
   color: var(--text-color-primary);
   margin-left: auto;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 .footer-form__button:hover, .footer-form__button:focus {
   background-color: var(--bnt-background-yellow);
 }
 
-.footer {
-  max-width: 480px;
-}
 .footer__list {
   padding: 0;
   margin: 0;
@@ -212,13 +219,11 @@ p {
   color: var(--btn-border);
 }
 
+.footer-container {
+  max-width: 480px;
+}
+
 @media screen and (min-width: 768px) {
-  .footer {
-    background-image: url("../images/footer/background-footer-tab-768w.png");
-    padding-top: 100px;
-    padding-bottom: 100px;
-    max-width: 768px;
-  }
   .footer__list {
     margin-bottom: 0;
     align-items: flex-end;
@@ -244,8 +249,16 @@ p {
   .footer-logo-nav__container {
     align-items: center;
   }
+  .footer-container {
+    background-image: url("../images/footer/background-footer-tab-768w.png");
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-position: bottom right;
+    max-width: 768px;
+  }
   .footer-nav {
     margin-left: 118px;
+    margin-right: 0;
   }
   .footer-nav__list {
     display: flex;
@@ -258,6 +271,9 @@ p {
     margin-bottom: 0;
     margin-right: 28px;
   }
+  .footer-nav__link {
+    color: var(--text-color-primary);
+  }
   .footer-form__input {
     width: 279px;
   }
@@ -267,6 +283,8 @@ p {
   .footer-form__rules {
     text-align: start;
     margin-bottom: 100px;
+    font-size: 12px;
+    line-height: 1.17;
   }
   .footer-form__container {
     display: flex;
@@ -280,8 +298,13 @@ p {
     margin-bottom: 0;
   }
 }
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .footer-container {
+    background-image: url("../images/footer/background-footer-tab-1536w.png");
+  }
+}
 @media screen and (min-width: 1280px) {
-  .footer {
+  .footer-container {
     background-image: url("../images/footer/background-footer-desk-1280w.png");
     background-size: contain;
     background-position: bottom;
@@ -299,5 +322,10 @@ p {
   }
   .footer-form__rules {
     margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .footer-container {
+    background-image: url("../images/footer/background-footer-desk-2560w.png");
   }
 }/*# sourceMappingURL=index.css.map */

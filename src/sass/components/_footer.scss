@@ -5,13 +5,8 @@
 // footer
 
 .footer {
-    background-image: url('../images/footer/background-footer-mob-480w.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 60px;
-    padding-bottom: 60px;
+
+    box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
 
 
     &__text {
@@ -22,9 +17,27 @@
     }
 }
 
-.footer__shadow {
-    box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
+.footer-container {
+    background-image: url('../images/footer/background-footer-mob-480w.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
+
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .footer-container {
+        background-image: url("../images/footer/background-footer-mob-960w.png");
+    }
+}
+
+
 
 // logo nav
 
@@ -45,7 +58,8 @@
 // footer nav
 
 .footer-nav {
-    margin-left: 180px;
+    margin-left: auto;
+    margin-right: 84px;
 
     &__list {
         @include list();
@@ -94,12 +108,14 @@
         line-height: 1.5;
     }
 
-    &__text {
+    &__label {
         font-weight: 500;
         font-size: 14px;
         line-height: 1.5;
         margin-bottom: 12px;
         color: var(--text-color-primary);
+        display: block;
+        cursor: pointer;
     }
 
     &__input {
@@ -147,6 +163,7 @@
         color: var(--text-color-primary);
         margin-left: auto;
         margin-bottom: 20px;
+        cursor: pointer;
 
 
         &:hover,
@@ -165,7 +182,6 @@
 
 .footer {
 
-    max-width: 480px;
 
     &__list {
         @include list();
@@ -183,15 +199,17 @@
 
 }
 
+.footer-container {
+    max-width: 480px;
+}
+
+
+
 
 @include mq(tab) {
 
     .footer {
-        background-image: url('../images/footer/background-footer-tab-768w.png');
-        padding-top: 100px;
-        padding-bottom: 100px;
 
-        max-width: 768px;
 
         &__list {
             margin-bottom: 0;
@@ -227,8 +245,18 @@
         align-items: center;
     }
 
+    .footer-container {
+        background-image: url('../images/footer/background-footer-tab-768w.png');
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-position: bottom right;
+
+        max-width: 768px;
+    }
+
     .footer-nav {
         margin-left: 118px;
+        margin-right: 0;
 
         &__list {
             display: flex;
@@ -246,6 +274,10 @@
 
         }
 
+        &__link {
+            color: var(--text-color-primary);
+        }
+
     }
 
 
@@ -261,6 +293,8 @@
         &__rules {
             text-align: start;
             margin-bottom: 100px;
+            font-size: 12px;
+            line-height: 1.17;
         }
 
         &__container {
@@ -281,11 +315,19 @@
     }
 
 
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .footer-container {
+            background-image: url("../images/footer/background-footer-tab-1536w.png");
+        }
+    }
+
 }
 
 
 @include mq(desk) {
-    .footer {
+    .footer-container {
         background-image: url('../images/footer/background-footer-desk-1280w.png');
         background-size: contain;
         background-position: bottom;
@@ -307,6 +349,14 @@
 
         &__rules {
             margin-bottom: 0;
+        }
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .footer-container {
+            background-image: url("../images/footer/background-footer-desk-2560w.png");
         }
     }
 
