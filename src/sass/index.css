@@ -200,6 +200,7 @@ p {
   margin-left: auto;
   margin-bottom: 20px;
   cursor: pointer;
+  transition: background-color var(--duration-primary) var(--timing-function-primary);
 }
 .footer-form__button:hover, .footer-form__button:focus {
   background-color: var(--bnt-background-yellow);
