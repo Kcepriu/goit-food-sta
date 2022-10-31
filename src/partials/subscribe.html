@@ -1,24 +1,28 @@
-<p>subscribe</p>
-
+<section class="section">
     <div class="subscribe">
         <img 
-        srcset="./images/banana.jpg 270w,
-        ./images/banana_tab.jpg 354w,
-        ./images/banana_desk.jpg 450w"
+        srcset="./images/subscribe/banan.png 270w,
+        ./images/subscribe/banan-tab.png 354w,
+        ./images/subscribe/banan-desk.png 450w,
+        ./images/subscribe/banan@2x.png 540w,
+        ./images/subscribe/banan-tab@2x.png 708w,
+        ./images/subscribe/banan-desk@2x.png 900w"
         sizes="(min-width:1280px) 450px, (min-width:767px) 354px,270px"
-        src="./images/banana.jpg" 
+        src="./images/subscribe/banan.png" 
         alt="Banana" class="subscribe__img">
-    <h3 class="subscribe__title"> Subscribe To Get Special Offers</h3>
+    <h2 class="subscribe__title"> Subscribe To Get Special Offers</h2>
 <p class="subscribe__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim 
     in eros elementum tristique.</p>
 <form class="subscribe__form">
     <label for="email"></label>
-    <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}" name="email" id="email" class="subscribe__input"  placeholder="Enter your email" req>
+    <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}" name="email" id="email" class="subscribe__input" placeholder="Enter your email">
     <div class="form-error">
-        <img class="form-error__img" src="./images/frame.png" alt="error">
+        <svg class="form-error__img" height="12" width="12">
+            <use href="./images/subscribe/symbol-defs.svg#icon-warning"></use>
+        </svg>
         <p class="form-error__text">Not a valid email address (example@email.com)</p>
     </div>
     <button class="subscribe__button">Subscribe</button>
-    
 </form> 
 </div>
+</section>
