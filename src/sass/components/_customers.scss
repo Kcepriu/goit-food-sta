@@ -2,19 +2,17 @@
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: #FFE550;
-   
     @include mq(tab)
     {
         padding-bottom: 120px;
-        
+       
     }
 
     @include mq(desk) {
        padding-top: 100px;
        padding-bottom: 200px;
-       
-      }
-}
+      
+}}
 .container{
     @include container();
 }
