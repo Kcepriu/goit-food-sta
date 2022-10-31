@@ -75,6 +75,7 @@
     border: 0.854167px solid #FFE550;
     border-radius: 30px;
     width: 100vw; 
+    cursor: pointer;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     @include mq(tab){
         width: 394px;
@@ -102,6 +103,7 @@
     border-radius: 30px;
     margin-top: 20px;
     margin-left: auto;
+    cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     @include mq(tab){
         margin-left: 22px;
