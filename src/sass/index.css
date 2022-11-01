@@ -1,0 +1,214 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+:root {
+  --text-color-primary: #2C2C2C;
+  --text-color-accent: #BBF330;
+  --text-color-placeholder: #505050;
+  --text-color-link: #7EB101;
+  --text-color-menu: #000000;
+  --error-color: #FF705D;
+  --bnt-background-green: #BBF330;
+  --bnt-background-green-acent: #B5FF00;
+  --bnt-background-white: #FFFFFF;
+  --bnt-background-yellow: #FFE550;
+  --btn-border: #7EB101;
+  --btn-border-acent: #597D00;
+  --background-primary: #FFFFFF;
+  --background-second: ##FEFEFE;
+  --background-yellow: #FFE550;
+  --background-circles: #FEFEFE;
+  --box-shadow-header: 0px 4px 24px rgba(105, 105, 105, 0.1);
+  --box-shadow-footer: 0px -4px 24px rgba(105, 105, 105, 0.1);
+  --swiper-navigation-size: 40px;
+  --padding-v-desk: 16px;
+  --padding-v-tab: 32px;
+  --padding-v-mob: 20px;
+  --duration-primary: 250ms;
+  --timing-function-primary: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  font-family: roboto, sans-serif;
+  color: var(--text-color-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.customers {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #FFE550;
+}
+@media screen and (min-width: 768px) {
+  .customers {
+    padding-bottom: 120px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .customers {
+    padding-top: 100px;
+    padding-bottom: 200px;
+  }
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--padding-v-mob);
+  padding-right: var(--padding-v-mob);
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-left: var(--padding-v-tab);
+    padding-right: var(--padding-v-tab);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    padding-left: var(--padding-v-desk);
+    padding-right: var(--padding-v-desk);
+  }
+}
+
+.customers__title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+  color: var(--text-color-primary);
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .customers__title {
+    font-size: 42px;
+    line-height: 1.16;
+  }
+}
+
+.customers__text {
+  font-size: 14px;
+  line-height: 1.14;
+  color: var(--text-color-primary);
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 768px) {
+  .customers__text {
+    font-size: 16px;
+    line-height: 1.18;
+  }
+}
+
+.customers__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+@media screen and (min-width: 768px) {
+  .customers__list {
+    display: flex;
+  }
+}
+
+.customers__item {
+  border-radius: 0px 30px 30px 30px;
+  background-color: var(--background-primary);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 8px;
+}
+@media screen and (min-width: 768px) {
+  .customers__item {
+    padding: 12px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .customers__item {
+    width: 500px;
+    padding: 14px;
+  }
+}
+
+.customers__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 768px) {
+  .customers__item:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 32px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .customers__item:not(:last-child) {
+    margin-right: 139px;
+  }
+}
+
+.customers__list--icon {
+  margin-bottom: 28px;
+}
+
+.customers__list--icon-star {
+  fill: #FFE550;
+}
+
+.customers__item--text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.19;
+  color: var(--text-color-primary);
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .customers__item--text {
+    font-size: 18px;
+    line-height: 1.17;
+  }
+}
+
+.customers__item--info {
+  display: flex;
+  width: 160px;
+  border-right: 0.85px solid rgb(126, 177, 1);
+}
+@media screen and (min-width: 768px) {
+  .customers__item--info {
+    border-right: 1px solid rgb(126, 177, 1);
+  }
+}
+
+.customers__item--img {
+  margin-right: 16px;
+}
+
+.customers__item--info-box {
+  display: block;
+}
+
+.customers__item--name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-color-primary);
+  margin-bottom: 2px;
+}
+
+.customers__item--dude {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-color-primary);
+}/*# sourceMappingURL=index.css.map */
