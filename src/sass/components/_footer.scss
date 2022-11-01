@@ -1,0 +1,304 @@
+// footer
+
+.footer {
+
+    box-shadow: var(--box-shadow-footer);
+
+}
+
+
+
+.footer__container {
+    background-image: url('../images/footer/background-footer-mob-480w.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include container();
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url("../images/footer/background-footer-mob-960w.png")
+    }
+
+    @include mq(tab) {
+        background-image: url('../images/footer/background-footer-tab-768w.png');
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-position: bottom right;
+
+        width: 768px;
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url("../images/footer/background-footer-tab-1536w.png");
+        }
+    }
+
+    @include mq(desk) {
+        background-image: url('../images/footer/background-footer-desk-1280w.png');
+        background-size: contain;
+        background-position: bottom;
+
+        width: 1280px;
+
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url("../images/footer/background-footer-desk-2560w.png");
+        }
+
+    }
+
+
+}
+
+
+// logo-nav container
+
+.footer-logo-nav__container {
+    display: flex;
+    margin-bottom: 40px;
+
+    @include mq(tab) {
+        align-items: center;
+    }
+}
+
+
+// footer logo
+
+.footer-logo__img {
+    @include img();
+    width: 69px;
+    height: 51px
+}
+
+// footer form-nav container
+
+
+.footer-nav-form__container {
+    @include mq(desk) {
+        display: flex;
+        margin-bottom: 80px;
+    }
+}
+
+
+
+// footer nav
+
+.footer-nav {
+    margin-left: auto;
+    margin-right: 84px;
+
+    @include mq(tab) {
+        margin-left: 118px;
+        margin-right: 0;
+    }
+
+    @include mq(desk) {
+        margin-left: 148px;
+    }
+
+    &__list {
+        @include list();
+
+        @include mq(tab) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__link {
+        @include link();
+        font-size: 14px;
+        line-height: 1.14;
+        color: var(--text-color-menu);
+
+        @include mq(tab) {
+            color: var(--text-color-primary);
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        @include mq(tab) {
+            align-items: center;
+
+            &:not(:last-child) {
+                margin-bottom: 0;
+                margin-right: 28px;
+            }
+        }
+    }
+}
+
+
+// form
+
+
+
+
+
+
+
+
+
+
+.footer-form {
+
+    @include mq(desk) {
+        margin-left: 318px;
+    }
+
+    &__rules {
+        font-size: 10px;
+        line-height: 1.2;
+        text-align: center;
+        margin-bottom: 60px;
+
+        @include mq(tab) {
+            text-align: start;
+            margin-bottom: 100px;
+            font-size: 12px;
+            line-height: 1.17;
+        }
+
+        @include mq(desk) {
+            margin-bottom: 0;
+        }
+    }
+
+
+    & .subscribe__input {
+        @include mq(tab) {
+            width: 279px;
+        }
+    }
+
+    & .subscribe__button {
+        height: 42px;
+
+        @include mq(tab) {
+            margin-left: 13px;
+        }
+    }
+
+    & label {
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow: visible;
+        margin: 0 0 12px 0;
+        clip: auto;
+        clip-path: none;
+        white-space: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.5;
+        color: var(--text-color-primary);
+    }
+
+    & .subscribe__form {
+        align-items: flex-end;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+
+        @include mq(tab) {
+            margin-bottom: 12px;
+        }
+    }
+
+    & .subscribe-container__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    & .subscribe__button {
+        background-color: var(--background-primary);
+        border: 0.854167px solid var(--btn-border);
+        transition: background-color var(--duration-time) var(--timing-function-primary);
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: var(--background-yellow)
+        }
+    }
+}
+
+
+
+// footer list
+
+
+.footer {
+
+
+    &__list {
+        @include list();
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 60px;
+
+        @include mq(tab) {
+            margin-bottom: 0;
+            align-items: flex-end;
+            justify-content: flex-start;
+        }
+    }
+
+    &__item {
+        @include mq(tab) {
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+    }
+
+    &__text {
+        font-size: 10px;
+        line-height: 12px;
+        color: var(--text-color-primary);
+        text-align: center;
+
+        @include mq(tab) {
+            align-items: flex-end;
+            display: flex;
+            margin-left: auto;
+            font-size: 12px;
+            line-height: 1.17;
+        }
+    }
+
+    &-text__container {
+        @include mq(tab) {
+            display: flex;
+        }
+    }
+
+    &__link {
+        font-size: 10px;
+        line-height: 1.2;
+        color: var(--btn-border);
+
+        @include mq(tab) {
+            font-size: 12px;
+            line-height: 1.17px;
+        }
+    }
+
+
+
+}
