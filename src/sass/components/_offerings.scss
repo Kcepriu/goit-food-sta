@@ -15,7 +15,9 @@
   }
 }
 
-.container {
+.offerings__container {
+  @include container();
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -226,7 +228,6 @@
 .offerings__btn:hover,
 .offerings__btn:focus {
   border: 2px solid var(--btn-border-acent);
-  border-radius: 30px;
 }
 
 .offerings__button {
