@@ -4,42 +4,72 @@
 
     box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
 
+}
 
-    &__text {
-        font-size: 10px;
-        line-height: 12px;
-        color: var(--text-color-primary);
-        text-align: center;
+
+
+.footer__container {
+    background-image: url('../images/footer/background-footer-mob-480w.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include container();
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url("../images/footer/background-footer-mob-960w.png")
     }
 
-    &__container {
-        background-image: url('../images/footer/background-footer-mob-480w.png');
-        background-repeat: no-repeat;
-        background-size: cover;
+    @include mq(tab) {
+        background-image: url('../images/footer/background-footer-tab-768w.png');
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-position: bottom right;
+
+        max-width: 768px;
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url("../images/footer/background-footer-tab-1536w.png");
+        }
+    }
+
+    @include mq(desk) {
+        background-image: url('../images/footer/background-footer-desk-1280w.png');
+        background-size: contain;
         background-position: bottom;
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 60px;
-        padding-bottom: 60px;
-        @include container()
+
+        max-width: 1280px;
+
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url("../images/footer/background-footer-desk-2560w.png");
+        }
+
     }
+
+
 }
 
-@media (min-device-pixel-ratio: 2),
-(min-resolution: 192dpi),
-(min-resolution: 2dppx) {
-    .footer__container {
-        background-image: url("../images/footer/background-footer-mob-960w.png");
-    }
-}
 
-
-
-// logo nav
+// logo-nav container
 
 .footer-logo-nav__container {
     display: flex;
     margin-bottom: 40px;
+
+    @include mq(tab) {
+        align-items: center;
+    }
 }
 
 
@@ -51,14 +81,40 @@
     height: 51px
 }
 
+// footer form-nav container
+
+
+.footer-nav-form__container {
+    @include mq(desk) {
+        display: flex;
+        margin-bottom: 80px;
+    }
+}
+
+
+
 // footer nav
 
 .footer-nav {
     margin-left: auto;
     margin-right: 84px;
 
+    @include mq(tab) {
+        margin-left: 118px;
+        margin-right: 0;
+    }
+
+    @include mq(desk) {
+        margin-left: 148px;
+    }
+
     &__list {
         @include list();
+
+        @include mq(tab) {
+            display: flex;
+            align-items: center;
+        }
     }
 
     &__link {
@@ -67,11 +123,23 @@
         line-height: 1.14;
         color: var(--text-color-menu);
 
+        @include mq(tab) {
+            color: var(--text-color-primary);
+        }
     }
 
     &__item {
         &:not(:last-child) {
             margin-bottom: 20px;
+        }
+
+        @include mq(tab) {
+            align-items: center;
+
+            &:not(:last-child) {
+                margin-bottom: 0;
+                margin-right: 28px;
+            }
         }
     }
 }
@@ -84,11 +152,26 @@
 
 
 
-
 .footer-form {
 
-    &__container-error {
-        margin-bottom: 20px;
+    @include mq(desk) {
+        margin-left: auto;
+    }
+
+    &__container {
+
+        @include mq(tab) {
+            display: flex;
+            margin-bottom: 12px;
+        }
+
+        &-error {
+            margin-bottom: 20px;
+
+            @include mq(tab) {
+                margin-bottom: 0;
+            }
+        }
     }
 
     &__rules {
@@ -96,6 +179,17 @@
         line-height: 1.2;
         text-align: center;
         margin-bottom: 60px;
+
+        @include mq(tab) {
+            text-align: start;
+            margin-bottom: 100px;
+            font-size: 12px;
+            line-height: 1.17;
+        }
+
+        @include mq(desk) {
+            margin-bottom: 0;
+        }
     }
 
     &__error {
@@ -135,12 +229,6 @@
 
         &:invalid {
             border-color: var(--error-color);
-
-            +.footer-form__error {
-                display: block;
-
-                color: var(--error-color);
-            }
         }
 
         &:not(:placeholder-shown):valid {
@@ -151,6 +239,10 @@
             font-size: 12px;
             line-height: 1.5;
             color: var(--text-color-placeholder);
+        }
+
+        @include mq(tab) {
+            width: 279px;
         }
     }
 
@@ -175,9 +267,20 @@
         &:focus {
             background-color: var(--bnt-background-yellow)
         }
+
+        @include mq(tab) {
+            margin-left: 13px;
+            margin-bottom: 0;
+        }
     }
 
 
+}
+
+.footer-form__input:invalid+.footer-form__error {
+    display: block;
+
+    color: var(--error-color);
 }
 
 
@@ -193,176 +296,54 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 60px;
-    }
 
-    &__link {
-        font-size: 10px;
-        line-height: 1.2;
-        color: var(--btn-border);
-    }
-
-
-}
-
-.footer-container {
-    max-width: 480px;
-}
-
-
-
-
-@include mq(tab) {
-
-    .footer {
-
-
-        &__list {
+        @include mq(tab) {
             margin-bottom: 0;
             align-items: flex-end;
             justify-content: flex-start;
         }
+    }
 
-        &__item {
+    &__item {
+        @include mq(tab) {
             &:not(:last-child) {
                 margin-right: 20px;
             }
         }
+    }
 
-        &-text__container {
-            display: flex;
-        }
+    &__text {
+        font-size: 10px;
+        line-height: 12px;
+        color: var(--text-color-primary);
+        text-align: center;
 
-        &__text {
+        @include mq(tab) {
             align-items: flex-end;
             display: flex;
             margin-left: auto;
             font-size: 12px;
             line-height: 1.17;
         }
+    }
 
-        &__link {
+    &-text__container {
+        @include mq(tab) {
+            display: flex;
+        }
+    }
+
+    &__link {
+        font-size: 10px;
+        line-height: 1.2;
+        color: var(--btn-border);
+
+        @include mq(tab) {
             font-size: 12px;
             line-height: 1.17px;
         }
     }
 
-    .footer-logo-nav__container {
-        align-items: center;
-    }
 
-    .footer__container {
-        background-image: url('../images/footer/background-footer-tab-768w.png');
-        padding-top: 100px;
-        padding-bottom: 100px;
-        background-position: bottom right;
-
-        max-width: 768px;
-    }
-
-    .footer-nav {
-        margin-left: 118px;
-        margin-right: 0;
-
-        &__list {
-            display: flex;
-            align-items: center;
-        }
-
-        &__item {
-            align-items: center;
-
-            &:not(:last-child) {
-                margin-bottom: 0;
-                margin-right: 28px;
-            }
-
-
-        }
-
-        &__link {
-            color: var(--text-color-primary);
-        }
-
-    }
-
-
-    .footer-form {
-        &__input {
-            width: 279px;
-        }
-
-        &__button {
-            margin-left: 0;
-        }
-
-        &__rules {
-            text-align: start;
-            margin-bottom: 100px;
-            font-size: 12px;
-            line-height: 1.17;
-        }
-
-        &__container {
-            display: flex;
-            margin-bottom: 12px;
-
-            &-error {
-                margin-bottom: 0;
-            }
-        }
-
-        &__button {
-            margin-left: 13px;
-            margin-bottom: 0;
-        }
-
-
-    }
-
-
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        .footer__container {
-            background-image: url("../images/footer/background-footer-tab-1536w.png");
-        }
-    }
-
-}
-
-
-@include mq(desk) {
-    .footer__container {
-        background-image: url('../images/footer/background-footer-desk-1280w.png');
-        background-size: contain;
-        background-position: bottom;
-
-        max-width: 1280px;
-    }
-
-    .footer-nav {
-        margin-left: 148px;
-    }
-
-    .footer-nav-form__container {
-        display: flex;
-        margin-bottom: 80px;
-    }
-
-    .footer-form {
-        margin-left: auto;
-
-        &__rules {
-            margin-bottom: 0;
-        }
-    }
-
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        .footer__container {
-            background-image: url("../images/footer/background-footer-desk-2560w.png");
-        }
-    }
 
 }
