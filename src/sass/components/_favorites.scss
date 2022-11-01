@@ -125,4 +125,25 @@
       border: 16px solid var(--bnt-background-green);
     }
   }
+
+  &:hover .favorites__img,
+  &:focus .favorites__img {
+    animation: favorites__img-animation 0.5s linear;
+    animation-iteration-count: infinite;
+
+    @keyframes favorites__img-animation {
+      25% {
+        rotate: 3deg;
+      }
+      50% {
+        rotate: 0deg;
+      }
+      75% {
+        rotate: -3deg;
+      }
+      100% {
+        rotate: 0deg;
+      }
+    }
+  }
 }
