@@ -1,46 +1,54 @@
-.section{
+.subscribe_section{
     @include section;
     padding-bottom: 60px;
     margin-top: -40px;
 }
 
-.subscribe{
+.subscribe_container{
     @include container;
 
 }
 .subscribe__title{
     font-weight: 700;
-    font-size: 42px;
     line-height: 1.2;
     margin-bottom: 20px;
     font-size: 28px;
+    color: var(--text-color-primary);
+    @include mq(tab){
+        font-size: 42px;
+    }
     @include mq(desk){
         padding-top: 40px;
     }
 }
 .subscribe__img{
     @include img;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
     margin-left: auto;
     margin-right: auto;
+    height: 78px;
     @include mq(tab){
         margin-left: auto;
+        margin-right: 0;
+        height: 136px;
     }
     @include mq(desk){
+        height: 266px;
         float: right;
         height: 266px;
         padding-bottom: 0;
     }
 }
 .subscribe__text{
-    line-height: 1.5;
+    line-height: 1.14;
     margin-bottom: 40px;
     font-size: 14px;
+    color: var(--text-color-primary);
     @include mq(tab){
         font-size: 16px;
+        margin-bottom: 24px;
     }
     @include mq(desk){
-        margin-bottom: 24px;
         width: 656px;
     }
 }
@@ -48,6 +56,9 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
+}
+.subscribe__label{
+    @include visually-hidden;
 }
 .form-error{
     position: absolute;
@@ -66,9 +77,11 @@
     line-height: 1.5;
     color: var(--error-color);
 }
+
 .subscribe__input{
     font-size: 12px;
-    line-height: 150%;
+    line-height: 1.5;
+    color: var( --text-color-primary);
     height: 42px;
     width:394px;
     padding-left: 11px;
@@ -90,6 +103,10 @@
         opacity: 1;
     }
 }}
+.subscribe__input::placeholder{
+    color: var(--text-color-placeholder);
+ }
+
 
 .subscribe__button{
     display: block;
