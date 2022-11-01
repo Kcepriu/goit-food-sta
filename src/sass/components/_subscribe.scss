@@ -68,11 +68,18 @@
     top: 45px;
     left: 5px;   
 }
-.form-error__img{
-    fill:var(--error-color);
+.form-error__text::before{
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
     margin-right: 4px;
+    background-image: url("../images/subscribe/error.svg");
+    background-repeat: no-repeat;
+    background-size:cover;
 }
 .form-error__text{
+    display: flex;
     font-size: 10px;
     line-height: 1.5;
     color: var(--error-color);
