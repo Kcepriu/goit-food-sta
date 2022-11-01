@@ -2,6 +2,9 @@ const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
+
+    speed: 800,
+    spaceBetween: 25,
   
     // If we need pagination
     pagination: {
@@ -10,12 +13,13 @@ const swiper = new Swiper('.swiper', {
   
     // Navigation arrows
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.btn-slide__left',
+      prevEl: '.btn-slide__right',
     },
   
     // And if we need scrollbar
     scrollbar: {
       el: '.swiper-scrollbar',
     },
+
   });

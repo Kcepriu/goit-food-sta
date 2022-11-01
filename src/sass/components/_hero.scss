@@ -1,206 +1,213 @@
 .hero{
-  padding-top: 60px;
-  padding-bottom: 50px;
-
-
-
-
-    .container{
-        position: relative;
-    
-        @include container();
-    }
-
-    @include mq(mob-only) {
-        justify-content: center;
-       
-
-      }
-    @include mq(tab) {
-        display: flex;
-        flex-wrap: wrap;
-        
-    }
-
-    
- 
-    
-    &__title {
-        font-weight: 700;
-        font-size: 28px;
-        line-height: 1.17;
-        color: var(--text-color-primary);
-
-        @include mq(mob-only) {
-           margin-bottom: 28px; 
-         }
-
-         @include mq(tab) {
-            font-size: 42px;
-           line-height: 1.2;
-           margin-bottom: 44px;
-           max-width: 537px;
-         }
-         @include mq(desk) {
-            margin-top: 159px;
-            font-size: 48px;
-            line-height: 1.2;
-         }
-        
-
-    }
-    &__text{
-        font-size: 14px;
-        line-height: 1.5;
-
-        color: var(--text-color-primary);
-       
-        @include mq(mob-only) {
-            margin-bottom: 28px; 
-          }
-
-          @include mq(tab) {
-            font-size: 16px;
-           line-height: 1.5;
-           margin-bottom: 40px;
-           max-width: 336px;
-         }
-        
-    }
-    &__btn {
-        font-weight: 500;
-        font-size: 13px;
-        line-height: 1.5;
-        background-color: var(--bnt-background-green);
-        padding: 6px 18px;
-        border-radius: 30px;
-        border: none;
-        cursor: pointer;
-
-        &:active {
-            background-color: var(--bnt-background-green-acent);
-         }
-        
-        @include mq(mob-only) {
-        justify-content: left;
-          }
-        @include mq(desk) {
-            &:hover {
-                background-color: var(--bnt-background-green-acent);
-            }
-        }
-        
-
-        
-
-     }
-    
-
-     &__img {
-        @include mq(mob-only) {
-            display: none;
-              }
-        
-        
-        @include mq(tab) {
-               position: absolute;
-               right: 0;
-               top: 50;
-               width: 320px;
-               height: 336px;
-             }
-
-    @include mq(desk) {
-                position: absolute;
-                right: 0;
-                top: 0;
-                width: 608px;
-                height: 580px;
-    }
-
-        .img {
-            border: 14px solid #FFE550;
-            border-radius: 50%;
-        }
-     }
-
-.btn-slide__left {
-    position: absolute;
-    background-color: #FFFFFF;
-    fill: var(--text-color-primary);
-    border: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
-    border-radius: 8px;
-    top: 50%;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    cursor: pointer;
- 
-    &:active {
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
-}
-
-
-    @include mq(tab) {
-    padding: 4px 9px;
-    width: 34px;
-    height: 28px;
-    left: -13;
-    }
-    
-    @include mq(desk) {
-    padding: 5px 19px 5px 13px;
-    width: 48px;
-    height: 40px;
-    left: -18;
-    &:hover {
-        fill: var(--btn-border);
-    }
-    
-
-    }
-}
-
-.btn-slide__right {
-    position: absolute;
-    background-color: #FFFFFF;
-    fill: var(--text-color-primary);
-    border: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
-    border-radius: 8px;
-    right: -40;
-    top: 50%;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: scale(-1, 1);
-    cursor: pointer;
-
-    &:active {
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
-    }
+    padding-top: 60px;
+    padding-bottom: 50px;
   
+  
+  &__container{
+          position: relative;
+      
+          @include container();}
+  
+      @include mq(mob-only) {
+          justify-content: center;
+         
+      }
+      @include mq(tab) {
+          display: flex;
+          flex-wrap: wrap;
+           }
+  
+      
    
-    @include mq(tab) {
-        padding: 4px 9px;
-        width: 34px;
-        height: 28px;
-        }
-    @include mq(desk) {
-            padding: 5px 19px 5px 13px;
-            width: 48px;
-            height: 40px;
-            right: -48;
-            &:hover {
-                fill: var(--btn-border);
+      
+    &__title {
+          font-weight: 700;
+          font-size: 28px;
+          line-height: 1.17;
+          color: var(--text-color-primary);
+  
+          @include mq(mob-only) {
+             margin-bottom: 28px; 
+           }
+  
+           @include mq(tab) {
+              font-size: 42px;
+             line-height: 1.2;
+             margin-bottom: 44px;
+             max-width: 537px;
+           }
+           @include mq(desk) {
+              margin-top: 159px;
+              font-size: 48px;
+              line-height: 1.2;
+           }
+          }
+     
+     &__text{
+          font-size: 14px;
+          line-height: 1.5;
+  
+          color: var(--text-color-primary);
+         
+          @include mq(mob-only) {
+              margin-bottom: 28px; 
             }
+  
+           @include mq(tab) {
+              font-size: 16px;
+             line-height: 1.5;
+             margin-bottom: 40px;
+             max-width: 336px;
+           }
+           }
+      
+      
+    &__btn {
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 1.5;
+          background-color: var(--bnt-background-green);
+          padding: 6px 18px;
+          border-radius: 30px;
+          border: none;
+          cursor: pointer;
+  
+          &:active {
+              background-color: var(--bnt-background-green-acent);
+           }
+          
+          @include mq(mob-only) {
+          justify-content: left;
+            }
+          @include mq(desk) {
+              &:hover {
+                  background-color: var(--bnt-background-green-acent);
+              }
+          }
+        }
+      
+  
+    .sl {
+        @include mq(mob-only) {
+              display: none;
+                }
+        @include mq(tab) {
+            position: absolute;
+            right: 0;
+            top: 50;
+            max-width: 320px;
+            max-height: 320px;
          
             }
-            }
-
+        
+            @include mq(desk) {
+            position: absolute;
+            right: 0;
+            top: 0;
+            max-width: 580px;
+            max-height: 580px;
+        }
 }
+
+    .image-slider {
+           border: 14px solid #FFE550;
+           border-radius: 50%;
+           overflow: hidden;
+
+        @include mq(desk) {
+           border: 26px solid #FFE550;
+}
+}
+    
+    .image-slider__image {
+        position: relative;
+        justify-content: center;
+        align-items: center;
+      }
+    
+    .img {
+        display: block;
+        box-sizing: inherit;
+        width: 100%;
+    
+       }
+    
+
+    .btn-slide__left {
+        position: absolute;
+        background-color: #FFFFFF;
+        fill: var(--text-color-primary);
+        border: none;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+        border-radius: 8px;
+        top: 50%;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+   
+      &:active {
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+  }
+  
+  
+       @include mq(tab) {
+          padding: 4px 9px;
+          width: 34px;
+          height: 28px;
+          left: -11;
+      }
+      
+        @include mq(desk) {
+           padding: 5px 19px 5px 13px;
+           width: 48px;
+           height: 40px;
+           left: -14;
+        &:hover {
+          fill: var(--btn-border);
+      }
+    }
+  }
+  
+  .btn-slide__right {
+      position: absolute;
+      background-color: #FFFFFF;
+      fill: var(--text-color-primary);
+      border: none;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+      border-radius: 8px;
+      
+      top: 50%;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: scale(-1, 1);
+      cursor: pointer;
+  
+      &:active {
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+      }
+    
+     
+      @include mq(tab) {
+          padding: 4px 9px;
+          width: 34px;
+          height: 28px;
+          right: -11;
+          }
+      @include mq(desk) {
+              padding: 5px 19px 5px 13px;
+              width: 48px;
+              height: 40px;
+              right: -14;
+              &:hover {
+                  fill: var(--btn-border);
+              }
+           
+              }
+              }
+  
+  }
     
