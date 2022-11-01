@@ -1,0 +1,126 @@
+.favorites {
+  @include container;
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include mq(tab) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.18;
+    text-align: center;
+    color: var(--text-color-primary);
+
+    margin-bottom: 20px;
+
+    @include mq(tab) {
+      font-size: 42px;
+      line-height: 1.17;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    color: var(--text-color-primary);
+
+    margin-bottom: 60px;
+
+    @include mq(tab) {
+      font-size: 16px;
+      line-height: 1.19;
+    }
+
+    @include mq(desk) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__list {
+    @include list;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    width: 280px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+    @include mq(tab) {
+      width: 704px;
+      gap: 32px;
+    }
+
+    @include mq(desk) {
+      width: 1248px;
+    }
+  }
+
+  &__item {
+    @include mq(tab) {
+      width: calc((100% - 32px) / 2);
+    }
+
+    @include mq(desk) {
+      width: calc((100% - 2 * 32px) / 3);
+    }
+
+    &:nth-child(n + 4) {
+      @include mq(mob-only) {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    @include link;
+
+    display: block;
+
+    width: 280px;
+    height: 282px;
+
+    border: 11px solid var(--bnt-background-yellow);
+    border-radius: 139.305px;
+    background: var(--background-circles);
+    padding: 17px;
+
+    transition-property: border-color;
+    transition-duration: var(--duration-primary);
+    transition-timing-function: var(--timing-function-primary);
+
+    @include mq(tab) {
+      width: 100%;
+      height: 338px;
+      border: 14px solid var(--bnt-background-yellow);
+      border-radius: 167.59px;
+      padding: 20px;
+    }
+
+    @include mq(desk) {
+      height: 397px;
+      border: 16px solid var(--bnt-background-yellow);
+      border-radius: 197.5px;
+      padding: 24px;
+    }
+
+    &:hover,
+    &:focus {
+      border: 11px solid var(--bnt-background-green);
+      @include mq(tab) {
+        border: 14px solid var(--bnt-background-green);
+      }
+      @include mq(desk) {
+        border: 16px solid var(--bnt-background-green);
+      }
+    }
+  }
+}
