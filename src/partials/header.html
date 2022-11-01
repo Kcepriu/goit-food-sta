@@ -1,50 +1,48 @@
 <body class="body">
 <header class="header">
-    <div class="container">
+    <div class="header__container"> 
         <div class="header__logo">
-            <a lang="en"href="">
+            <a lang="en"href="./index.html">
             <img class="header__logo-img" src="./images/logo.png" alt="logo">
             </a>
         </div>
         <nav class="navigation">
             <ul class="navigation__list list">
               <li class="navigation__item">
-                <a href="" class="navigation__link current">Home</a>
+                <a href="#header" class="navigation__link ">Home</a>
               </li>
               <li class="navigation__item">
-                <a href="" class="navigation__link ">About</a>
+                <a href="#hero" class="navigation__link ">About</a>
               </li>
               <li class="navigation__item">
-                <a href="" class="navigation__link ">Service</a>
+                <a href="#offerings" class="navigation__link ">Service</a>
               </li>
               <li class="navigation__item">
-                <a href="" class="navigation__link ">Menu</a>
+                <a href="#favorites" class="navigation__link ">Menu</a>
               </li>
               <li class="navigation__item">
-                <a href="" class="navigation__link ">Contact</a>
-              </li>
-              <li>
-                <button type="button" class="navigation__btn" data-modal-open> Order Now</button>
+                <a href="#subscribe" class="navigation__link ">Contact</a>
               </li>
             </ul>
+            <button type="button" class="navigation__btn" data-modal-open> Order Now</button>
           </nav>
         <button
              type="button"
-             class="menu-button pointer"
+             class="menu__button pointer"
              aria-expanded="false"
              aria-controls="menu"
              data-menu-button >
           <svg
-             class="menu-burger"
+             class="menu__burger"
              width="40px"
              height="40px"
-             aria-label="Переключатель мобильного меню">
+             aria-label="mob menu">
           <use
-              class="menu-icon-burger"
+              class="menu__icon-burger"
               href="/src/images/icons.svg#icon-menu-burger">
              </use>
           <use
-              class="menu-icon-cross"
+              class="menu__icon-cross"
               href="/src/images/icons.svg#icon-menu-closer">
             </use>
         </svg>
@@ -57,23 +55,22 @@
                 <a href="#hero" class="menu__link ">Hero</a>
               </li>
               <li class="menu__item">
-                 <a href="#Offerings" class="menu__link">Offerings</a>
+                 <a href="#offerings" class="menu__link">Offerings</a>
               </li>
               <li class="menu__item">
-                 <a href="#Favorites" class="menu__link">Favorites</a>
+                 <a href="#favorites" class="menu__link">Favorites</a>
               </li>
               <li class="menu__item">
-                <a href="#Customers" class="menu__link">Customers</a>
+                <a href="#customers" class="menu__link">Customers</a>
               </li>
               <li class="menu__item">
-                <a href="#Subscribe" class="menu__link">Subscribe</a>
+                <a href="#subscribe" class="menu__link">Subscribe</a>
               </li>
               <li class="menu__item">
-                <a href="#Footer" class="menu__link">Footer</a>
+                <a href="#footer" class="menu__link">Footer</a>
               </li>
             </ul>
         </nav>
     </div>
 </header>
 </body>
-<script src="./index.js"></script>
