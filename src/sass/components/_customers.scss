@@ -1,0 +1,138 @@
+.customers {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #FFE550;
+
+    @include mq(tab) {
+        padding-bottom: 120px;
+
+    }
+
+    @include mq(desk) {
+        padding-top: 100px;
+        padding-bottom: 200px;
+
+    }
+}
+
+.customers__container {
+    @include container();
+}
+
+.customers__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.18;
+    color: var(--text-color-primary);
+    margin-bottom: 20px;
+
+    @include mq(tab) {
+        font-size: 42px;
+        line-height: 1.16;
+    }
+}
+
+.customers__text {
+
+    font-size: 14px;
+    line-height: 1.14;
+    color: var(--text-color-primary);
+    margin-bottom: 32px;
+
+    @include mq(tab) {
+        font-size: 16px;
+        line-height: 1.18;
+    }
+}
+
+.customers__list {
+    @include list();
+
+    @include mq(tab) {
+        display: flex;
+    }
+
+}
+
+.customers__item {
+    border-radius: 0px 30px 30px 30px;
+    background-color: var(--background-primary);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 8px;
+
+    @include mq(tab) {
+        padding: 12px;
+    }
+
+    @include mq(desk) {
+        width: 500px;
+        padding: 14px;
+    }
+}
+
+.customers__item:not(:last-child) {
+    margin-bottom: 24px;
+
+    @include mq(tab) {
+        margin-bottom: 0;
+        margin-right: 32px;
+    }
+
+    @include mq(desk) {
+        margin-right: 139px;
+    }
+}
+
+.customers__list--icon {
+    margin-bottom: 28px;
+
+}
+
+.customers__list--icon-star {
+    fill: #FFE550;
+}
+
+.customers__item--text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.19;
+    color: var(--text-color-primary);
+    margin-bottom: 40px;
+
+    @include mq(tab) {
+        font-size: 18px;
+        line-height: 1.17;
+    }
+}
+
+.customers__item--info {
+    display: flex;
+    width: 160px;
+    border-right: 0.85px solid rgba(126, 177, 1, 1);
+
+    @include mq(tab) {
+        border-right: 1px solid rgba(126, 177, 1, 1);
+    }
+}
+
+.customers__item--img {
+    margin-right: 16px;
+}
+
+.customers__item--info-box {
+    display: block;
+}
+
+.customers__item--name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-color-primary);
+    margin-bottom: 2px;
+}
+
+.customers__item--dude {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-color-primary)
+}

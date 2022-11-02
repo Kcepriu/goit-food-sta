@@ -1,69 +1,81 @@
-.header{
+.header {
     background-color: var(--background-second);
-    position: relative; 
-    &__container{
-        z-index: 1;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 1280px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        height: 72px;
-        padding: 10px 20px;
-        box-shadow: var(--box-shadow-header);
-        @include mq(tab){
-            padding: 10px 32px;
-        }
-        @include mq(desk) {
-            padding: 10px 16px;
-        }
+    position: relative;
+}
+
+.header__container {
+    @include container();
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 72px;
+    padding: 10px 20px;
+    box-shadow: var(--box-shadow-header);
+
+    @include mq(tab) {
+        padding: 10px 32px;
+    }
+
+    @include mq(desk) {
+        padding: 10px 16px;
     }
 }
+
+
 .navigation {
     display: none;
+
     @include mq(tab) {
-        display:flex;
+        display: flex;
     }
+
     &__list {
-      @include list;
-      display: flex;
-      align-items: center;
-      column-gap: 28px;
+        @include list;
+        display: flex;
+        align-items: center;
+        column-gap: 28px;
     }
+
     &__link {
-      text-decoration: none;
-      font-size: 14px;
-      line-height: 1.14;
-      color: var(--text-color-menu);
-      padding-top: 28px;
-      padding-bottom: 28px;
-      transition-property: color;
-      transition-duration: 250ms;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      &:hover,
-      &:focus {
-        color: var(--text-color-accent);
-        font-weight: 500;
-        text-decoration-line: underline;
-      }
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 1.14;
+        color: var(--text-color-menu);
+        padding-top: 28px;
+        padding-bottom: 28px;
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+            color: var(--text-color-accent);
+            font-weight: 500;
+            text-decoration-line: underline;
+        }
     }
-    &__btn{
-      cursor: pointer;
-      margin-left: 30px;
-      border: none;
-      padding: 6px 18px;
-      font-size: 13px;
-      font-weight: 500;
-      background-color: var(--bnt-background-green);
-      border-radius: 30px;
-      &:hover,
-      &:focus {
+
+    &__btn {
+        cursor: pointer;
+        margin-left: 30px;
+        border: none;
+        padding: 6px 18px;
+        font-size: 13px;
         font-weight: 500;
-        background-color: var(--bnt-background-green-acent);
+        background-color: var(--bnt-background-green);
+        border-radius: 30px;
+
+        &:hover,
+        &:focus {
+            font-weight: 500;
+            background-color: var(--bnt-background-green-acent);
+        }
     }
-}
 }
 
 
@@ -71,9 +83,9 @@
     opacity: 0;
     position: absolute;
     z-index: 2;
-    top:50px;
-    right:20px;
-    background-color:#FEFEFE;
+    top: 50px;
+    right: 20px;
+    background-color: var(--background-second);
     box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
     border-radius: 30px 0px 30px 30px;
     overflow: hidden;
@@ -82,24 +94,27 @@
     &__container {
         width: 130px;
     }
-    &__list{
-      @include list;
+
+    &__list {
+        @include list;
     }
-    &__item{
+
+    &__item {
         padding: 16px;
-        &:active{
+
+        &:active {
             background-color: var(--bnt-background-green);
         }
     }
-   
-    &__link{
+
+    &__link {
         font-size: 16px;
         line-height: 19px;
-        color: #000000;
+        color: var(--text-color-menu);
         text-decoration: none;
         cursor: pointer;
     }
-    
+
     &.is-open {
         opacity: 1;
 
@@ -114,8 +129,8 @@
         border: none;
         background-color: transparent;
         transition-property: color;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: var(--duration-primary);
+        transition-timing-function: var(--timing-function-primary);
 
         &:hover,
         &:focus {
@@ -138,18 +153,18 @@
     &__button.is-open .menu__icon-burger {
         display: none;
     }
-    &__icon-burger{
-        fill:var(--btn-border);
+
+    &__icon-burger {
+        fill: var(--btn-border);
     }
 
     &__icon-cross {
-        fill: #2C2C2C;
+        fill: var(--text-color-primary);
     }
-}    
+}
 
-img {
-    display: block;
+.header__logo-img {
+    @include img;
     max-width: 100%;
     height: auto;
 }
-
