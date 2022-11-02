@@ -15,6 +15,12 @@ p {
   margin-bottom: 0;
 }
 
+.no-scroll {
+  overflow: hidden;
+  overflow-y: hidden;
+}
+
+
 // * {
 //   outline: 1px solid red;
 // }

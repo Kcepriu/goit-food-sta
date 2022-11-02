@@ -1,22 +1,22 @@
 .customers {
     padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: #FFE550;
+    padding-bottom: 16px;
+
 
     @include mq(tab) {
-        padding-bottom: 120px;
-
+        padding-bottom: 45px;
     }
 
     @include mq(desk) {
         padding-top: 100px;
-        padding-bottom: 200px;
-
+        padding-bottom: 130px;
     }
 }
 
 .customers__container {
     @include container();
+
+    outline: 1px solid red;
 }
 
 .customers__title {

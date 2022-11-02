@@ -13,8 +13,8 @@ const swiper = new Swiper('.swiper', {
   
     // Navigation arrows
     navigation: {
-      nextEl: '.btn-slide__left',
-      prevEl: '.btn-slide__right',
+      prevEl: '.btn-slide__left',
+      nextEl: '.btn-slide__right',
     },
   
     // And if we need scrollbar
@@ -22,4 +22,9 @@ const swiper = new Swiper('.swiper', {
       el: '.swiper-scrollbar',
     },
 
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+  
   });

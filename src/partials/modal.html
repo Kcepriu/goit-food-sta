@@ -1,1 +1,78 @@
-<p>modal</p>
+<!-- Modal window -->
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal-window">
+    <button class="modal-window__btn-close" type="button" data-modal-close>
+      <svg class="modal-window__icon-close">
+        <use href="./images/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+
+    <form class="order-from" name="order-from">
+      <h2 class="modal-window__title">Order Form</h2>
+
+      <div class="modal-window__wrap-input">
+        <input
+          class="modal-window__input"
+          type="text"
+          name="name-client"
+          id="label-name-client"
+          placeholder="Your name"
+          required
+          pattern="^[a-zA-Z]+"
+        />
+        <label class="modal-window__label" for="label-name-client">Name</label>
+        <svg class="modal-window__icon-input" width="18" height="18">
+          <use href="./images/icons.svg#icon-person-modal"></use>
+        </svg>
+        <p class="modal-window__error">
+          The name must be between 3 and 25 characters
+        </p>
+      </div>
+
+      <div class="modal-window__wrap-input">
+        <input
+          class="modal-window__input"
+          type="tel"
+          name="phone-client"
+          id="label-phone-client"
+          placeholder="+380111111111"
+          required
+          minlength="8"
+          maxlength="14"
+          pattern="^(?=.*\d)(?!.*\s).*$"
+        />
+        <label class="modal-window__label" for="label-phone-client"
+          >Phone number</label
+        >
+        <svg class="modal-window__icon-input" width="18" height="18">
+          <use href="./images/icons.svg#icon-photo-modal"></use>
+        </svg>
+        <p class="modal-window__error">
+          This phone must be in the format 099 000 00 00
+        </p>
+      </div>
+
+      <div class="modal-window__wrap-input">
+        <input
+          class="modal-window__input"
+          type="email"
+          name="email-client"
+          id="label-email-client"
+          placeholder="example@gmail.com"
+          required
+          minlength="6"
+          pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
+        />
+        <label class="modal-window__label" for="label-email-client"
+          >E-mail</label
+        >
+        <svg class="modal-window__icon-input" width="18" height="18">
+          <use href="./images/icons.svg#icon-email-modal"></use>
+        </svg>
+        <p class="modal-window__error">Please enter a valid email address</p>
+      </div>
+
+      <button class="modal-window__button-send" type="submit">Send</button>
+    </form>
+  </div>
+</div>
