@@ -1,6 +1,4 @@
 .favorites {
-  @include container;
-
   padding-top: 60px;
   padding-bottom: 60px;
 
@@ -8,120 +6,148 @@
     padding-top: 100px;
     padding-bottom: 100px;
   }
+}
 
-  &__title {
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 1.18;
-    text-align: center;
-    color: var(--text-color-primary);
+.favorites__container {
+  @include container;
+}
 
-    margin-bottom: 20px;
+.favorites__title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.18;
+  text-align: center;
+  color: var(--text-color-primary);
 
-    @include mq(tab) {
-      font-size: 42px;
-      line-height: 1.17;
-    }
+  margin-bottom: 20px;
+
+  @include mq(tab) {
+    font-size: 42px;
+    line-height: 1.17;
+  }
+}
+
+.favorites__text {
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  color: var(--text-color-primary);
+
+  margin-bottom: 60px;
+
+  @include mq(tab) {
+    font-size: 16px;
+    line-height: 1.19;
   }
 
-  &__text {
-    font-size: 14px;
-    line-height: 1.14;
-    text-align: center;
-    color: var(--text-color-primary);
+  @include mq(desk) {
+    margin-bottom: 40px;
+  }
+}
 
-    margin-bottom: 60px;
+.favorites__list {
+  @include list;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  width: 280px;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  @include mq(tab) {
+    width: 704px;
+    gap: 32px;
+  }
+
+  @include mq(desk) {
+    width: 1248px;
+  }
+}
+
+.favorites__item {
+  @include mq(tab) {
+    width: calc((100% - 32px) / 2);
+  }
+
+  @include mq(desk) {
+    width: calc((100% - 2 * 32px) / 3);
+  }
+
+  &:nth-child(n + 4) {
+    @include mq(mob-only) {
+      display: none;
+    }
+  }
+}
+
+.favorites__link {
+  @include link;
+
+  display: block;
+
+  width: 280px;
+  height: 282px;
+
+  border: 11px solid var(--bnt-background-yellow);
+  border-radius: 139.305px;
+  background: var(--background-circles);
+  padding: 17px;
+
+  transition-property: border-color;
+  transition-duration: var(--duration-primary);
+  transition-timing-function: var(--timing-function-primary);
+
+  @include mq(tab) {
+    width: 100%;
+    height: 338px;
+    border: 14px solid var(--bnt-background-yellow);
+    border-radius: 167.59px;
+    padding: 20px;
+  }
+
+  @include mq(desk) {
+    height: 397px;
+    border: 16px solid var(--bnt-background-yellow);
+    border-radius: 197.5px;
+    padding: 24px;
+  }
+
+  &:hover,
+  &:focus {
+    border: 11px solid var(--bnt-background-green);
 
     @include mq(tab) {
-      font-size: 16px;
-      line-height: 1.19;
+      border: 14px solid var(--bnt-background-green);
     }
 
     @include mq(desk) {
-      margin-bottom: 40px;
+      border: 16px solid var(--bnt-background-green);
     }
   }
 
-  &__list {
-    @include list;
+  &:hover .favorites__img,
+  &:focus .favorites__img {
+    animation: favorites__img-animation 0.5s linear;
+    animation-iteration-count: infinite;
 
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-
-    width: 280px;
-
-    margin-right: auto;
-    margin-left: auto;
-
-    @include mq(tab) {
-      width: 704px;
-      gap: 32px;
-    }
-
-    @include mq(desk) {
-      width: 1248px;
-    }
-  }
-
-  &__item {
-    @include mq(tab) {
-      width: calc((100% - 32px) / 2);
-    }
-
-    @include mq(desk) {
-      width: calc((100% - 2 * 32px) / 3);
-    }
-
-    &:nth-child(n + 4) {
-      @include mq(mob-only) {
-        display: none;
+    @keyframes favorites__img-animation {
+      25% {
+        rotate: 3deg;
       }
-    }
-  }
 
-  &__link {
-    @include link;
-
-    display: block;
-
-    width: 280px;
-    height: 282px;
-
-    border: 11px solid var(--bnt-background-yellow);
-    border-radius: 139.305px;
-    background: var(--background-circles);
-    padding: 17px;
-
-    transition-property: border-color;
-    transition-duration: var(--duration-primary);
-    transition-timing-function: var(--timing-function-primary);
-
-    @include mq(tab) {
-      width: 100%;
-      height: 338px;
-      border: 14px solid var(--bnt-background-yellow);
-      border-radius: 167.59px;
-      padding: 20px;
-    }
-
-    @include mq(desk) {
-      height: 397px;
-      border: 16px solid var(--bnt-background-yellow);
-      border-radius: 197.5px;
-      padding: 24px;
-    }
-
-    &:hover,
-    &:focus {
-      border: 11px solid var(--bnt-background-green);
-
-      @include mq(tab) {
-        border: 14px solid var(--bnt-background-green);
+      50% {
+        rotate: 0deg;
       }
 
-      @include mq(desk) {
-        border: 16px solid var(--bnt-background-green);
+      75% {
+        rotate: -3deg;
+      }
+
+      100% {
+        rotate: 0deg;
       }
     }
   }
