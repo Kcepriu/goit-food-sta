@@ -1,47 +1,28 @@
 .hero {
-  padding-top: 60px;
+  padding-top: 132px; //60
   padding-bottom: 50px;
 
   @include mq(desk) {
-    padding-top: 14px;
-
+    padding-top: 86px; //14
   }
-
 
 
   &__container {
     @include container();
     display: flex;
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: var(--padding-v-mob);
-    padding-right: var(--padding-v-mob);
-    width: 100%;
 
     @include mq(mob-only) {
       align-items: center;
-
     }
 
     @include mq(tab) {
       flex-direction: row;
-      max-width: $tablet;
-      padding-left: var(--padding-v-tab);
-      padding-right: var(--padding-v-tab);
     }
 
     @include mq(tab-only) {
       position: relative;
     }
-
-    @include mq(desk) {
-      max-width: $desktop;
-
-      padding-left: var(--padding-v-desk);
-      padding-right: var(--padding-v-desk);
-    }
-
   }
 
 
@@ -152,12 +133,12 @@
   }
 
   .image-slider {
-    border: 14px solid #FFE550;
+    border: 14px solid var(--bnt-background-yellow);
     border-radius: 50%;
     overflow: hidden;
 
     @include mq(desk) {
-      border: 26px solid #FFE550;
+      border: 26px solid var(--bnt-background-yellow);
     }
   }
 
@@ -177,7 +158,7 @@
 
   .btn-slide__left {
     position: absolute;
-    background-color: #FFFFFF;
+    background-color: var(--bnt-background-white);
     fill: var(--text-color-primary);
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
@@ -215,7 +196,7 @@
 
   .btn-slide__right {
     position: absolute;
-    background-color: #FFFFFF;
+    background-color: var(--bnt-background-white);
     fill: var(--text-color-primary);
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
