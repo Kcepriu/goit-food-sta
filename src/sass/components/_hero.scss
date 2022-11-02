@@ -1,5 +1,5 @@
 .hero {
-  padding-top: 60px;
+  padding-top: 132px; //60
   padding-bottom: 50px;
 
 
@@ -17,6 +17,10 @@
   @include mq(tab) {
     display: flex;
     flex-wrap: wrap;
+
+    @include mq(desk) {
+      padding-top: 86px; //14
+    }
   }
 
 
