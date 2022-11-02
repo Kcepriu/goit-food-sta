@@ -1,16 +1,16 @@
 .offerings {
   width: 100%;
-  background-image: url(/src/images/offerings/bcg/rectangle-mob.jpg);
+  background-image: url(../images/offerings/bcg/rectangle-mob.jpg);
   background-size: cover;
   margin: 0 auto;
   padding-bottom: 100px;
 
   @include mq(tab) {
-    background-image: url(/src/images/offerings/bcg/rectangle-tabl.jpg);
+    background-image: url(../images/offerings/bcg/rectangle-tabl.jpg);
   }
 
   @include mq(desk) {
-    background-image: url(/src/images/offerings/bcg/rectangle-desk.jpg);
+    background-image: url(../images/offerings/bcg/rectangle-desk.jpg);
     padding-bottom: 43px;
   }
 }
