@@ -1,1 +1,76 @@
-<p>header</p>
+<header id="header" class="header">
+  <div class="header__container">
+    <div class="header__logo">
+      <a lang="en" href="./index.html">
+        <img class="header__logo-img" src="./images/logo.png" alt="logo" />
+      </a>
+    </div>
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a href="#offerings" class="navigation__link">Offerings</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#favorites" class="navigation__link">Favorites</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#customers" class="navigation__link">Customers</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#subscribe" class="navigation__link">Subscribe</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#footer" class="navigation__link">Footer</a>
+        </li>
+      </ul>
+      <button type="button" class="navigation__btn" data-modal-open>
+        Order Now
+      </button>
+    </nav>
+
+    <button
+      type="button"
+      class="menu__button pointer"
+      aria-expanded="false"
+      aria-controls="menu"
+      data-menu-button
+    >
+      <svg
+        class="menu__burger"
+        width="40px"
+        height="40px"
+        aria-label="mob menu"
+      >
+        <use
+          class="menu__icon-burger"
+          href="./images/icons.svg#icon-menu-burger"
+        ></use>
+        <use
+          class="menu__icon-cross"
+          href="./images/icons.svg#icon-menu-closer"
+        ></use>
+      </svg>
+    </button>
+  </div>
+  <div class="menu" id="menu" data-menu>
+    <nav class="menu__container">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="#offerings" class="menu__link">Offerings</a>
+        </li>
+        <li class="menu__item">
+          <a href="#favorites" class="menu__link">Favorites</a>
+        </li>
+        <li class="menu__item">
+          <a href="#customers" class="menu__link">Customers</a>
+        </li>
+        <li class="menu__item">
+          <a href="#subscribe" class="menu__link">Subscribe</a>
+        </li>
+        <li class="menu__item">
+          <a href="#footer" class="menu__link">Footer</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
