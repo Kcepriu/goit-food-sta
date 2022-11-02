@@ -129,7 +129,7 @@
               display: none;
                 }
         @include mq(tab) {
-          margin-right: 0;
+          margin-right: 9px;
           margin-left: auto;
           margin-top: 89px;
           max-width: 320px;
@@ -139,6 +139,7 @@
         
         @include mq(desk) {
         margin-top: 0px;
+        margin-right: 13px;
         max-width: 580px;
         max-height: 580px;
         }
