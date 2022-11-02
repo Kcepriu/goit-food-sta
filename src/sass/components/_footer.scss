@@ -158,8 +158,12 @@
 
 .footer-form {
 
+    @include mq(tab) {
+        width: 396px;
+    }
+
     @include mq(desk) {
-        margin-left: 318px;
+        margin-left: auto;
     }
 
     &__rules {

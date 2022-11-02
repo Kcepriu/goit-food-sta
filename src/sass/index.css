@@ -1024,9 +1024,14 @@ p {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .footer-form {
+    width: 396px;
+  }
+}
 @media screen and (min-width: 1280px) {
   .footer-form {
-    margin-left: 318px;
+    margin-left: auto;
   }
 }
 .footer-form__rules {
