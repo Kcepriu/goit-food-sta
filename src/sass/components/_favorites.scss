@@ -118,9 +118,11 @@
   &:hover,
   &:focus {
     border: 11px solid var(--bnt-background-green);
+
     @include mq(tab) {
       border: 14px solid var(--bnt-background-green);
     }
+
     @include mq(desk) {
       border: 16px solid var(--bnt-background-green);
     }
@@ -135,12 +137,15 @@
       25% {
         rotate: 3deg;
       }
+
       50% {
         rotate: 0deg;
       }
+
       75% {
         rotate: -3deg;
       }
+
       100% {
         rotate: 0deg;
       }
