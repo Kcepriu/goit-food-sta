@@ -1,17 +1,15 @@
 // footer
-
 .footer {
-
     box-shadow: var(--box-shadow-footer);
-
 }
-
-
 
 .footer__container {
     background-image: url('../images/footer/background-footer-mob-480w.png');
     background-repeat: no-repeat;
+
+    //background-size: 100% 619px;
     background-size: cover;
+
     background-position: bottom;
     margin-left: auto;
     margin-right: auto;
