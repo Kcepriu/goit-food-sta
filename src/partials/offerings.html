@@ -5,8 +5,8 @@
         <img
           class="offerings__apple--mobile"
           srcset="
-            ../src/images/offerings/aple/apple-mob-280.png    1x,
-            ../src/images/offerings/aple/apple-mob-280@2x.png 2x
+            ./images/offerings/aple/apple-mob-280.png    1x,
+            ./images/offerings/aple/apple-mob-280@2x.png 2x
           "
           src="../src/images/offerings/aple/apple-mob-280.png"
           alt="aple"
@@ -16,10 +16,10 @@
         <img
           class="offerings__apple--tablet"
           srcset="
-            ../src/images/offerings/aple/apple-tablet-704.png    1x,
-            ../src/images/offerings/aple/apple-tablet-704@2x.png 2x
+            ./images/offerings/aple/apple-tablet-704.png    1x,
+            ./images/offerings/aple/apple-tablet-704@2x.png 2x
           "
-          src="../src/images/offerings/aple/apple-tablet-704.png"
+          src="./images/offerings/aple/apple-tablet-704.png"
           alt="aple"
         />
       </picture>
@@ -27,10 +27,10 @@
         <img
           class="offerings__apple--desktop"
           srcset="
-            ../src/images/offerings/aple/apple-desktop-550.png    1x,
-            ../src/images/offerings/aple/apple-desktop-550@2x.png 2x
+            ./images/offerings/aple/apple-desktop-550.png    1x,
+            ./images/offerings/aple/apple-desktop-550@2x.png 2x
           "
-          src="../src/images/offerings/aple/apple-desktop-550.png"
+          src="./images/offerings/aple/apple-desktop-550.png"
           alt="aple"
         />
       </picture>
@@ -43,16 +43,14 @@
         ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
       </p>
       <ul class="offerings__list">
-        <li class="offerings__item">
-          <div class="offerings__icon" id="offerings__rocket"></div>
+        <li class="offerings__item--rocket">
           <h3 class="offerings__pretitle">Fasest Delivery</h3>
           <p class="offerings__pretext">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             varius enim in eros.
           </p>
         </li>
-        <li class="offerings__item">
-          <div class="offerings__icon" id="offerings__touch--app"></div>
+        <li class="offerings__item--touch-app">
           <h3 class="offerings__pretitle">Easy To Order</h3>
           <p class="offerings__pretext">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
@@ -60,7 +58,9 @@
           </p>
         </li>
       </ul>
-      <button type="button" class="offerings__btn">Order Now</button>
+      <button type="button" class="offerings__btn" data-modal-open>
+        Order Now
+      </button>
       <button type="button" class="offerings__button">Read More</button>
     </div>
   </div>
