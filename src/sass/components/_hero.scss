@@ -2,31 +2,32 @@
   padding-top: 132px; //60
   padding-bottom: 50px;
 
+  @include mq(desk) {
+    padding-top: 86px; //14
+  }
+
 
   &__container {
-    position: relative;
-
     @include container();
-  }
-
-  @include mq(mob-only) {
-    justify-content: center;
-
-  }
-
-  @include mq(tab) {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 
-    @include mq(desk) {
-      padding-top: 86px; //14
+    @include mq(mob-only) {
+      align-items: center;
+    }
+
+    @include mq(tab) {
+      flex-direction: row;
+    }
+
+    @include mq(tab-only) {
+      position: relative;
     }
   }
 
 
-
-
   &__title {
+
     font-weight: 700;
     font-size: 28px;
     line-height: 1.17;
@@ -34,6 +35,7 @@
 
     @include mq(mob-only) {
       margin-bottom: 28px;
+      max-width: 280px;
     }
 
     @include mq(tab) {
@@ -43,7 +45,12 @@
       max-width: 537px;
     }
 
+    @include mq(tab-only) {
+      position: absolute;
+    }
+
     @include mq(desk) {
+      max-width: 503px;
       margin-top: 159px;
       font-size: 48px;
       line-height: 1.2;
@@ -58,14 +65,22 @@
 
     @include mq(mob-only) {
       margin-bottom: 28px;
+      max-width: 280px
     }
 
     @include mq(tab) {
       font-size: 16px;
       line-height: 1.5;
+      margin-top: 144px;
       margin-bottom: 40px;
       max-width: 336px;
     }
+
+    @include mq(desk) {
+      max-width: 502px;
+      margin-top: 28px;
+    }
+
   }
 
 
@@ -95,41 +110,40 @@
   }
 
 
-  .sl {
+  .slaider-img {
     @include mq(mob-only) {
       display: none;
     }
 
     @include mq(tab) {
-      position: absolute;
-      right: 0;
-      top: 50;
+      margin-right: 9px;
+      margin-left: auto;
+      margin-top: 89px;
       max-width: 320px;
       max-height: 320px;
-
+      position: relative;
     }
 
     @include mq(desk) {
-      position: absolute;
-      right: 0;
-      top: 0;
+      margin-top: 0px;
+      margin-right: 13px;
       max-width: 580px;
       max-height: 580px;
     }
   }
 
   .image-slider {
-    border: 14px solid #FFE550;
+    border: 14px solid var(--bnt-background-yellow);
     border-radius: 50%;
     overflow: hidden;
 
     @include mq(desk) {
-      border: 26px solid #FFE550;
+      border: 26px solid var(--bnt-background-yellow);
     }
   }
 
   .image-slider__image {
-    position: relative;
+
     justify-content: center;
     align-items: center;
   }
@@ -144,7 +158,7 @@
 
   .btn-slide__left {
     position: absolute;
-    background-color: #FFFFFF;
+    background-color: var(--bnt-background-white);
     fill: var(--text-color-primary);
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
@@ -182,12 +196,11 @@
 
   .btn-slide__right {
     position: absolute;
-    background-color: #FFFFFF;
+    background-color: var(--bnt-background-white);
     fill: var(--text-color-primary);
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
     border-radius: 8px;
-
     top: 50%;
     z-index: 1;
     display: flex;
