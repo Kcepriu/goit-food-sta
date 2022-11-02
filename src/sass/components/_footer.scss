@@ -158,12 +158,27 @@
 
 .footer-form {
 
-    @include mq(tab) {
-        width: 396px;
-    }
 
     @include mq(desk) {
         margin-left: auto;
+    }
+
+
+    & .subscribe__form-text {
+        position: relative;
+        width: auto;
+        height: auto;
+        overflow: visible;
+        margin: 0;
+        clip: auto;
+        clip-path: none;
+        white-space: normal;
+        margin-bottom: 12px;
+    }
+
+    & .subscribe__label {
+        display: flex;
+        flex-direction: column;
     }
 
     &__rules {
@@ -190,9 +205,6 @@
             width: 279px;
         }
 
-        &:invalid {
-            margin-bottom: 19px;
-        }
     }
 
     & .subscribe__button {
@@ -203,23 +215,14 @@
         }
     }
 
-    & .form-error {
-        top: 77px;
-    }
 
     & label {
-        position: relative;
-        width: 100%;
-        height: auto;
-        overflow: visible;
-        margin: 0 0 12px 0;
-        clip: auto;
-        clip-path: none;
-        white-space: normal;
         font-weight: 400;
         font-size: 14px;
         line-height: 1.5;
         color: var(--text-color-primary);
+        display: flex;
+        flex-direction: column;
     }
 
     & .subscribe__form {
