@@ -67,22 +67,73 @@
     display: flex;
     margin-bottom: 40px;
 
-    @include mq(tab) {
-        align-items: center;
+    & .navigation {
+        display: block;
+        margin-left: 84px;
+        margin-right: auto;
+
+        @include mq(tab) {
+            margin-left: auto;
+            margin-right: 0;
+            justify-content: center;
+            display: flex;
+        }
+
+        &__link {
+            display: block;
+            padding-top: 0;
+            padding-bottom: 0;
+
+        }
+
+        &__item {
+            &:not(:last-of-type) {
+                margin-bottom: 20px;
+            }
+
+            @include mq(tab) {
+                &:not(:last-of-type) {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            @include mq(tab) {
+                flex-direction: row;
+                align-items: center;
+                margin: 0;
+            }
+        }
+    }
+
+
+
+
+
+
+    .navigation__list {
+
+        @include mq(desk) {
+            margin-left: 148px;
+        }
+    }
+
+    & .navigation__btn {
+        display: none;
     }
 }
 
 
 // footer logo
 
-.footer-logo__img {
-    @include img();
-    width: 69px;
-    height: 51px
-}
+
 
 // footer form-nav container
-
 
 .footer-nav-form__container {
     @include mq(desk) {
@@ -93,56 +144,9 @@
 
 
 
+
 // footer nav
 
-.footer-nav {
-    margin-left: auto;
-    margin-right: 84px;
-
-    @include mq(tab) {
-        margin-left: 118px;
-        margin-right: 0;
-    }
-
-    @include mq(desk) {
-        margin-left: 148px;
-    }
-
-    &__list {
-        @include list();
-
-        @include mq(tab) {
-            display: flex;
-            align-items: center;
-        }
-    }
-
-    &__link {
-        @include link();
-        font-size: 14px;
-        line-height: 1.14;
-        color: var(--text-color-menu);
-
-        @include mq(tab) {
-            color: var(--text-color-primary);
-        }
-    }
-
-    &__item {
-        &:not(:last-child) {
-            margin-bottom: 20px;
-        }
-
-        @include mq(tab) {
-            align-items: center;
-
-            &:not(:last-child) {
-                margin-bottom: 0;
-                margin-right: 28px;
-            }
-        }
-    }
-}
 
 
 // form
@@ -212,6 +216,16 @@
 
         @include mq(tab) {
             margin-left: 13px;
+            margin-bottom: 20px;
+            background-color: var(--background-primary);
+            border: 0.854167px solid var(--btn-border);
+            transition: background-color var(--duration-time) var(--timing-function-primary);
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: var(--background-yellow)
+            }
         }
     }
 
@@ -238,18 +252,6 @@
     & .subscribe-container__form {
         display: flex;
         flex-direction: column;
-    }
-
-    & .subscribe__button {
-        background-color: var(--background-primary);
-        border: 0.854167px solid var(--btn-border);
-        transition: background-color var(--duration-time) var(--timing-function-primary);
-
-        &:hover,
-        &:focus,
-        &:active {
-            background-color: var(--background-yellow)
-        }
     }
 }
 

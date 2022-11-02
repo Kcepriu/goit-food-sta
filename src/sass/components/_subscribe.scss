@@ -72,7 +72,8 @@
 .form-error {
     align-items: center;
     display: flex;
-    @include visually-hidden;
+    opacity: 0;
+    transition: opacity var(--duration-primary) var(--timing-function-primary);
 }
 
 .form-error__text {
@@ -126,14 +127,7 @@
         border: 0.854167px solid #FF705D;
 
         &+.form-error {
-            position: relative;
-            width: auto;
-            height: auto;
-            overflow: visible;
-            margin: 0;
-            clip: auto;
-            clip-path: none;
-            white-space: normal;
+            opacity: 1;
         }
     }
 }

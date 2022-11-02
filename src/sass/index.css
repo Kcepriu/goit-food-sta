@@ -1242,17 +1242,8 @@ p {
 .form-error {
   align-items: center;
   display: flex;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
-  margin: -1px;
+  opacity: 0;
+  transition: opacity var(--duration-primary) var(--timing-function-primary);
 }
 
 .form-error__text {
@@ -1312,15 +1303,7 @@ p {
   border: 0.854167px solid #FF705D;
 }
 .subscribe__input:invalid + .form-error {
-  position: relative;
-  width: auto;
-  height: auto;
-  overflow: visible;
-  margin: 0;
-  clip: auto;
-  -webkit-clip-path: none;
-          clip-path: none;
-  white-space: normal;
+  opacity: 1;
 }
 
 .subscribe__input::-moz-placeholder {
@@ -1457,72 +1440,57 @@ p {
   display: flex;
   margin-bottom: 40px;
 }
+.footer-logo-nav__container .navigation {
+  display: block;
+  margin-left: 84px;
+  margin-right: auto;
+}
 @media screen and (min-width: 768px) {
-  .footer-logo-nav__container {
-    align-items: center;
+  .footer-logo-nav__container .navigation {
+    margin-left: auto;
+    margin-right: 0;
+    justify-content: center;
+    display: flex;
   }
 }
-
-.footer-logo__img {
+.footer-logo-nav__container .navigation__link {
   display: block;
-  width: 69px;
-  height: 51px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.footer-logo-nav__container .navigation__item:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .footer-logo-nav__container .navigation__item:not(:last-of-type) {
+    margin-bottom: 0px;
+  }
+}
+.footer-logo-nav__container .navigation__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .footer-logo-nav__container .navigation__list {
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer-logo-nav__container .navigation__list {
+    margin-left: 148px;
+  }
+}
+.footer-logo-nav__container .navigation__btn {
+  display: none;
 }
 
 @media screen and (min-width: 1280px) {
   .footer-nav-form__container {
     display: flex;
     margin-bottom: 80px;
-  }
-}
-
-.footer-nav {
-  margin-left: auto;
-  margin-right: 84px;
-}
-@media screen and (min-width: 768px) {
-  .footer-nav {
-    margin-left: 118px;
-    margin-right: 0;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer-nav {
-    margin-left: 148px;
-  }
-}
-.footer-nav__list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-@media screen and (min-width: 768px) {
-  .footer-nav__list {
-    display: flex;
-    align-items: center;
-  }
-}
-.footer-nav__link {
-  text-decoration: none;
-  font-size: 14px;
-  line-height: 1.14;
-  color: var(--text-color-menu);
-}
-@media screen and (min-width: 768px) {
-  .footer-nav__link {
-    color: var(--text-color-primary);
-  }
-}
-.footer-nav__item:not(:last-child) {
-  margin-bottom: 20px;
-}
-@media screen and (min-width: 768px) {
-  .footer-nav__item {
-    align-items: center;
-  }
-  .footer-nav__item:not(:last-child) {
-    margin-bottom: 0;
-    margin-right: 28px;
   }
 }
 
@@ -1577,6 +1545,13 @@ p {
 @media screen and (min-width: 768px) {
   .footer-form .subscribe__button {
     margin-left: 13px;
+    margin-bottom: 20px;
+    background-color: var(--background-primary);
+    border: 0.854167px solid var(--btn-border);
+    transition: background-color var(--duration-time) var(--timing-function-primary);
+  }
+  .footer-form .subscribe__button:hover, .footer-form .subscribe__button:focus, .footer-form .subscribe__button:active {
+    background-color: var(--background-yellow);
   }
 }
 .footer-form label {
@@ -1600,14 +1575,6 @@ p {
 .footer-form .subscribe-container__form {
   display: flex;
   flex-direction: column;
-}
-.footer-form .subscribe__button {
-  background-color: var(--background-primary);
-  border: 0.854167px solid var(--btn-border);
-  transition: background-color var(--duration-time) var(--timing-function-primary);
-}
-.footer-form .subscribe__button:hover, .footer-form .subscribe__button:focus, .footer-form .subscribe__button:active {
-  background-color: var(--background-yellow);
 }
 
 .footer__list {
