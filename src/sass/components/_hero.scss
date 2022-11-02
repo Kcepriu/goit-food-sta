@@ -1,42 +1,71 @@
 .hero{
     padding-top: 60px;
     padding-bottom: 50px;
+
+    @include mq(desk) {
+      padding-top: 14px;
+      
+    }
+
   
   
   &__container{
-          position: relative;
-      
-          @include container();}
+        @include container();
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: var(--padding-v-mob);
+        padding-right: var(--padding-v-mob);
+        width: 100%;
   
       @include mq(mob-only) {
-          justify-content: center;
+        align-items: center;
          
       }
       @include mq(tab) {
-          display: flex;
-          flex-wrap: wrap;
+        flex-direction: row;
+          max-width: $tablet;
+          padding-left: var(--padding-v-tab);
+          padding-right: var(--padding-v-tab);
            }
+
+      @include mq(tab-only){
+            position: relative;
+           }
+      @include mq(desk) {
+        max-width: $desktop;
+        
+        padding-left: var(--padding-v-desk);
+        padding-right: var(--padding-v-desk);
+       }
   
-      
+        }
    
       
     &__title {
+      
           font-weight: 700;
           font-size: 28px;
           line-height: 1.17;
           color: var(--text-color-primary);
   
           @include mq(mob-only) {
-             margin-bottom: 28px; 
+             margin-bottom: 28px;
+             max-width: 280px;
            }
   
            @include mq(tab) {
-              font-size: 42px;
+            font-size: 42px;
              line-height: 1.2;
              margin-bottom: 44px;
              max-width: 537px;
            }
+           @include mq(tab-only){
+            position: absolute;
+           }
            @include mq(desk) {
+            max-width: 503px;
               margin-top: 159px;
               font-size: 48px;
               line-height: 1.2;
@@ -51,14 +80,22 @@
          
           @include mq(mob-only) {
               margin-bottom: 28px; 
+              max-width: 280px
             }
   
            @include mq(tab) {
               font-size: 16px;
              line-height: 1.5;
+             margin-top: 144px;
              margin-bottom: 40px;
              max-width: 336px;
            }
+
+           @include mq(desk) {
+            max-width: 502px;
+            margin-top: 28px;
+           }
+
            }
       
       
@@ -87,25 +124,23 @@
         }
       
   
-    .sl {
+    .slaider-img {
         @include mq(mob-only) {
               display: none;
                 }
         @include mq(tab) {
-            position: absolute;
-            right: 0;
-            top: 50;
-            max-width: 320px;
-            max-height: 320px;
-         
+          margin-right: 0;
+          margin-left: auto;
+          margin-top: 89px;
+          max-width: 320px;
+          max-height: 320px;
+          position: relative;
             }
         
-            @include mq(desk) {
-            position: absolute;
-            right: 0;
-            top: 0;
-            max-width: 580px;
-            max-height: 580px;
+        @include mq(desk) {
+        margin-top: 0px;
+        max-width: 580px;
+        max-height: 580px;
         }
 }
 
@@ -120,7 +155,7 @@
 }
     
     .image-slider__image {
-        position: relative;
+        
         justify-content: center;
         align-items: center;
       }
@@ -177,7 +212,6 @@
       border: none;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
       border-radius: 8px;
-      
       top: 50%;
       z-index: 1;
       display: flex;
