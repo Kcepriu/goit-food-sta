@@ -115,9 +115,11 @@
     &:hover,
     &:focus {
       border: 11px solid var(--bnt-background-green);
+
       @include mq(tab) {
         border: 14px solid var(--bnt-background-green);
       }
+
       @include mq(desk) {
         border: 16px solid var(--bnt-background-green);
       }
