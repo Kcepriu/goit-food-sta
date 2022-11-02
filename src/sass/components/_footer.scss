@@ -189,6 +189,10 @@
         @include mq(tab) {
             width: 279px;
         }
+
+        &:invalid {
+            margin-bottom: 19px;
+        }
     }
 
     & .subscribe__button {
@@ -197,6 +201,10 @@
         @include mq(tab) {
             margin-left: 13px;
         }
+    }
+
+    & .form-error {
+        top: 77px;
     }
 
     & label {

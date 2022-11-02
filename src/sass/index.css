@@ -1058,6 +1058,9 @@ p {
     width: 279px;
   }
 }
+.footer-form .subscribe__input:invalid {
+  margin-bottom: 19px;
+}
 .footer-form .subscribe__button {
   height: 42px;
 }
@@ -1065,6 +1068,9 @@ p {
   .footer-form .subscribe__button {
     margin-left: 13px;
   }
+}
+.footer-form .form-error {
+  top: 77px;
 }
 .footer-form label {
   position: relative;
