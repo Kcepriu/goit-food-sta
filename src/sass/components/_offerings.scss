@@ -1,17 +1,49 @@
 .offerings {
   width: 100%;
-  background-image: url(../images/offerings/bcg/rectangle-mob.jpg);
-  background-size: cover;
-  margin: 0 auto;
+
+  margin-top: 50px;
   padding-bottom: 100px;
 
+  background-repeat: no-repeat;
+  background-size: 100% 525px, 100% 800px;
+  background-position: left top, left bottom;
+  background-image: url('../images/backgrounds/offerings-mob1x.jpg'), url('../images/backgrounds/offerings-mob1x.jpg');
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: url('../images/backgrounds/offerings-mob@2x.jpg'), url('../images/backgrounds/offerings-mob@2x.jpg');
+  }
+
   @include mq(tab) {
-    background-image: url(../images/offerings/bcg/rectangle-tabl.jpg);
+    margin-top: -108px;
+    padding-top: 150px;
+
+    background-size: 100% 1140px;
+    background-image: url('../images/backgrounds/offerings-tab1x.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url('../images/backgrounds/offerings-tab@2x.jpg');
+    }
+
   }
 
   @include mq(desk) {
-    background-image: url(../images/offerings/bcg/rectangle-desk.jpg);
+    margin-top: -161px;
+    padding-top: 177px;
     padding-bottom: 43px;
+
+
+    background-size: 100% 824px;
+    background-image: url('../images/backgrounds/offerings-desk1x.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url('../images/backgrounds/offerings-desk@2x.jpg');
+    }
   }
 }
 
@@ -28,15 +60,15 @@
 
   @include mq(desk) {
     flex-direction: row;
-    padding-top: 70px;
   }
 }
 
 .offerings__img {
-  margin-top: 50px;
+  padding-top: 41px;
 
-  @include mq(desk) {
-    margin-top: 70px;
+  @include mq(tab) {
+    padding-top: 0;
+    // margin-top: 70px;
   }
 }
 
@@ -52,7 +84,6 @@
 .offerings__apple--tabl {
   @include mq(tab) {
     display: block;
-    padding-top: 115px;
   }
 
   @include mq(desk) {
@@ -81,15 +112,17 @@
 }
 
 .offerings__wrap {
-  @include mq(tab) {
-    max-width: 620px;
-  }
+  padding-top: 60px;
+
+  // @include mq(tab) {
+  //   padding-top: 60px;
+  // }
 
   @include mq(desk) {
     max-width: 573px;
-    margin-top: 99px;
     margin-left: 90px;
     margin-right: 0;
+    padding-top: 83px;
   }
 }
 
@@ -99,7 +132,7 @@
   font-size: 28px;
   line-height: 1.17;
   color: var(--text-color-primary);
-  margin-top: 60px;
+  // margin-top: 60px;
   margin-bottom: 28px;
 
   @include mq(tab) {
@@ -133,25 +166,40 @@
 }
 
 .offerings__list {
-  list-style: none;
-  padding: 0;
+  @include list;
+  margin-top: 28px;
 
   @include mq(tab) {
     display: flex;
-    justify-content: space-between;
+    gap: 116px;
+    margin-top: 0px;
   }
 
   @include mq(desk) {
-    list-style: none;
-    padding: 0;
+    gap: 67px;
   }
 }
 
 
 .offerings__item--rocket {
   @include mq(desk) {
-    margin-right: 67px;
+    width: 253px;
+    margin-top: 28px;
+
+    @include mq(tab) {
+      margin-top: 0;
+    }
   }
+}
+
+.offerings__item--touch-app {
+  width: 253px;
+  margin-top: 28px;
+
+  @include mq(tab) {
+    margin-top: 0;
+  }
+
 }
 
 @mixin offerings-item-before() {
@@ -175,18 +223,16 @@
 .offerings__item--rocket::before {
   @include offerings-item-before();
   background-image: url('../images/offerings/offerings-rocket.svg');
-  margin-top: 28px;
 
-  @include mq(tab) {
-    margin-top: 0;
-  }
+
+
 }
 
 .offerings__item--touch-app::before {
   @include offerings-item-before();
   background-image: url('../images/offerings/offerings-touch.svg');
 
-  margin-top: 28px;
+
 
   @include mq(tab) {
     margin-top: 0;
@@ -196,16 +242,15 @@
 .offerings__pretitle {
   font-weight: 700;
   font-size: 18px;
-  line-height: 1.4;
+  line-height: 1.17;
   color: var(--text-color-primary);
-  margin-top: 8px;
   margin-bottom: 16px;
 }
 
 .offerings__pretext {
   max-width: 252px;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.19;
   color: var(--text-color-primary);
 
   @include mq(tab) {
@@ -219,6 +264,8 @@
 }
 
 .offerings__btn {
+  display: inline-block;
+
   font-weight: 500;
   font-size: 13px;
   line-height: 1.5;
@@ -233,7 +280,7 @@
   cursor: pointer;
 
   @include mq(tab) {
-    margin-top: 40px;
+    margin-top: 37px;
   }
 
   @include mq(desk) {
