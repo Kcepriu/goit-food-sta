@@ -1607,17 +1607,17 @@ p {
 }
 .footer-form .subscribe__button {
   height: 42px;
+  background-color: var(--background-primary);
+  border: 0.854167px solid var(--btn-border);
+  transition: background-color var(--duration-time) var(--timing-function-primary);
+}
+.footer-form .subscribe__button:hover, .footer-form .subscribe__button:focus, .footer-form .subscribe__button:active {
+  background-color: var(--background-yellow);
 }
 @media screen and (min-width: 768px) {
   .footer-form .subscribe__button {
     margin-left: 13px;
     margin-bottom: 19px;
-    background-color: var(--background-primary);
-    border: 0.854167px solid var(--btn-border);
-    transition: background-color var(--duration-time) var(--timing-function-primary);
-  }
-  .footer-form .subscribe__button:hover, .footer-form .subscribe__button:focus, .footer-form .subscribe__button:active {
-    background-color: var(--background-yellow);
   }
 }
 .footer-form label {
