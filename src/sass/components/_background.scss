@@ -2,26 +2,34 @@
   max-width: 100%;
   background-repeat: no-repeat;
 
+  // background-size: 100% 769px;
+  // background-image: url('../images/backgrounds/customer-mob.jpg');
+
+  // @media (min-device-pixel-ratio: 2),
+  // (min-resolution: 192dpi),
+  // (min-resolution: 2dppx) {
+  //   background-image: url('../images/backgrounds/customer-mob2x.jpg');
+  // }
+
   background-size: 100% 769px;
-  background-image: url('../images/backgrounds/customer-mob.jpg');
+  background-image: url('../images/backgrounds/customers-480-1x.jpg');
 
   @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
-    background-image: url('../images/backgrounds/customer-mob2x.jpg');
+    background-image: url('../images/backgrounds/customers-480-2x.jpg');
   }
 
+  // @include mq(mob) {
+  //   background-size: 100% 769px;
+  //   background-image: url('../images/backgrounds/customers-480-1x.jpg');
 
-  @include mq(mob) {
-    background-size: 100% 769px;
-    background-image: url('../images/backgrounds/customers-480-1x.jpg');
-
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-      background-image: url('../images/backgrounds/customers-480-2x.jpg');
-    }
-  }
+  //   @media (min-device-pixel-ratio: 2),
+  //   (min-resolution: 192dpi),
+  //   (min-resolution: 2dppx) {
+  //     background-image: url('../images/backgrounds/customers-480-2x.jpg');
+  //   }
+  // }
 
 
   @include mq(tab) {
