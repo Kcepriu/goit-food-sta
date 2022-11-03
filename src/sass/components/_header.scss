@@ -69,6 +69,7 @@
         padding: 6px 18px;
         font-size: 13px;
         font-weight: 500;
+        line-height: 1.5;
         background-color: var(--bnt-background-green);
         border-radius: 30px;
 
@@ -111,7 +112,7 @@
 
     &__link {
         font-size: 16px;
-        line-height: 19px;
+        line-height: 1.19;
         color: var(--text-color-menu);
         text-decoration: none;
         cursor: pointer;
