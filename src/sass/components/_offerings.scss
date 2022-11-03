@@ -20,25 +20,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--padding-v-mob);
-  padding-right: var(--padding-v-mob);
-  width: 100%;
+
 
   @include mq(tab) {
-    max-width: $tablet;
     align-items: stretch;
-    padding-left: var(--padding-v-tab);
-    padding-right: var(--padding-v-tab);
   }
 
   @include mq(desk) {
-    max-width: $desktop;
     flex-direction: row;
     padding-top: 70px;
-    padding-left: var(--padding-v-desk);
-    padding-right: var(--padding-v-desk);
   }
 }
 
@@ -157,7 +147,8 @@
   }
 }
 
-.offerings__item:not(:last-child) {
+
+.offerings__item--rocket {
   @include mq(desk) {
     margin-right: 67px;
   }

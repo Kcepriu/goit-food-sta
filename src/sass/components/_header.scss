@@ -1,8 +1,9 @@
 .header {
     background-color: var(--background-second);
     position: fixed;
-    width:100%;
-    z-index: 99;
+
+    width: 100%;
+    z-index: 40;
     box-shadow: var(--box-shadow-header);
 }
 
@@ -155,7 +156,7 @@
         transition-property: all;
         transition-duration: var(--duration-primary);
         transition-timing-function: var(--timing-function-primary);
-        
+
     }
 
     &__button.is-open .menu__icon-burger {

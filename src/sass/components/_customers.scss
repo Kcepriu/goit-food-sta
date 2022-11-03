@@ -15,8 +15,6 @@
 
 .customers__container {
     @include container();
-
-    outline: 1px solid red;
 }
 
 .customers__title {
