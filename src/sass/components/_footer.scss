@@ -1,33 +1,28 @@
 // footer
 .footer {
     box-shadow: var(--box-shadow-footer);
-}
 
-.footer__container {
-    background-image: url('../images/footer/background-footer-mob-480w.png');
+    background-image: url('../images/backgrounds/background-footer-mob-right-480w.jpg'),
+        url('../images/backgrounds/background-footer-mob-bottom-480w.jpg'),
+        url('../images/backgrounds/background-footer-mob-left-480w.jpg');
     background-repeat: no-repeat;
 
-    //background-size: 100% 619px;
-    background-size: cover;
+    background-size: 104px 259px, 253px 66px, 110px 116px;
 
-    background-position: bottom;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    background-position: top right, bottom center, 0px 111px;
 
-    @include container();
 
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-        background-image: url("../images/footer/background-footer-mob-960w.png")
+        background-image: url('../images/backgrounds/background-footer-mob-right-960w.jpg'),
+            url('../images/backgrounds/background-footer-mob-bottom-960w.jpg'),
+            url('../images/backgrounds/background-footer-mob-left-960w.jpg');
     }
 
     @include mq(tab) {
-        background-image: url('../images/footer/background-footer-tab-768w.png');
-        padding-top: 100px;
-        padding-bottom: 100px;
+        background-image: url('../images/backgrounds/background-footer-tab-768w.jpg');
+        background-size: 785px 506px;
         background-position: bottom right;
 
 
@@ -35,26 +30,39 @@
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
-            background-image: url("../images/footer/background-footer-tab-1536w.png");
+            background-image: url("../images/backgrounds/background-footer-tab-1536w.jpg");
         }
     }
 
     @include mq(desk) {
-        background-image: url('../images/footer/background-footer-desk-1280w.png');
-        background-size: contain;
-        background-position: bottom;
+        background-image: url('../images/backgrounds/background-footer-desk-1280w.jpg');
+        background-size: 1211px 266px;
+        background-position: bottom center;
 
 
 
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
-            background-image: url("../images/footer/background-footer-desk-2560w.png");
+            background-image: url("../images/backgrounds/background-footer-desk-2560w.jpg");
         }
 
     }
+}
 
+.footer__container {
 
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include container();
+
+    @include mq(tab) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
 }
 
 
@@ -126,7 +134,6 @@
 }
 
 
-// footer logo
 
 
 
@@ -141,8 +148,6 @@
 
 
 
-
-// footer nav
 
 
 
