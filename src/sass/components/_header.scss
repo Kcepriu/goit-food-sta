@@ -8,6 +8,9 @@
 }
 
 .header__container {
+    @include container;
+    position: relative;
+
     z-index: 1;
     margin-left: auto;
     margin-right: auto;
