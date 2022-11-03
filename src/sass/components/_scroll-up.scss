@@ -1,0 +1,51 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.to-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+
+  width: 50px;
+  height: 50px;
+
+  color: var(--text-color-primary);
+  background: var(--text-color-link);
+  border-radius: 50%;
+
+  font-size: 32px;
+  text-decoration: none;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+
+  &:hover,
+  &:focus {
+    color: var(--background-primary);
+    background: var(--btn-border-acent);
+  }
+
+  @include mq(tab) {
+    width: 60px;
+    height: 60px;
+    bottom: 16px;
+    right: 32px;
+  }
+
+  @include mq(desk) {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.to-top.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
+}
