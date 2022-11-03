@@ -28,3 +28,25 @@ for(let anchor of anchors) {
   })
 }
 })();
+//  мои попытки сделать норм закрытие меню,тут 3 варианта
+// var block = document.getElementById('menuList');
+
+// document.addEventListener('click', function(e) {
+//   if (e.target.id != 'menuList') {
+//     menu.classList.toggle('is-open');
+//   }
+// });
+	
+// const menu = document.querySelector('menu');
+// document.addEventListener('click', (e) => {
+//   const click = e.composedPath().includes(menu);
+//   if ( click ) {
+//     menu.classList.remove("is-open");
+//   }
+// })
+
+	// pageBody.addEventListener('click', function () {
+	// 	document.querySelector('.menu.is-open').classList.remove('is-open');
+	// 	this.classList.remove('is-open');
+	// 	bodyScrollLock.classList.remove('no-scroll');
+	// });
