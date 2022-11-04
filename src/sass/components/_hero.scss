@@ -12,9 +12,7 @@
     display: flex;
     flex-direction: column;
 
-    @include mq(mob-only) {
-      align-items: center;
-    }
+
 
     @include mq(tab) {
       flex-direction: row;
@@ -35,7 +33,7 @@
 
     @include mq(mob-only) {
       margin-bottom: 28px;
-      max-width: 280px;
+
     }
 
     @include mq(tab) {
@@ -65,7 +63,7 @@
 
     @include mq(mob-only) {
       margin-bottom: 28px;
-      max-width: 280px
+    
     }
 
     @include mq(tab) {
@@ -155,6 +153,13 @@
 
   }
 
+  .hero-svg { 
+    @include mq(desk) {
+    width: 16px;
+    height: 30px;
+    }
+ }
+
 
   .btn-slide__left {
     position: absolute;
@@ -173,6 +178,7 @@
     &:active {
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
     }
+ 
 
 
     @include mq(tab) {
@@ -180,6 +186,8 @@
       width: 34px;
       height: 28px;
       left: -11;
+
+     
     }
 
     @include mq(desk) {
