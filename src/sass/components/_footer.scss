@@ -23,7 +23,8 @@
     @include mq(tab) {
         background-image: url('../images/backgrounds/background-footer-tab-right-768w.jpg'),
             url('../images/backgrounds/background-footer-tab-bottom-768w.jpg');
-        background-size: 203px 365px, 785px 506px;
+        // background-size: 203px 365px, 785px 506px;
+        background-size: 203px 365px, 100%;
         background-position: right top, bottom center;
 
 
