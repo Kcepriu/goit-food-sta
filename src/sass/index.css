@@ -1489,13 +1489,42 @@ p {
 
 .footer {
   box-shadow: var(--box-shadow-footer);
+  background-image: url("../images/backgrounds/background-footer-mob-right-480w.jpg"), url("../images/backgrounds/background-footer-mob-bottom-480w.jpg"), url("../images/backgrounds/background-footer-mob-left-480w.jpg");
+  background-repeat: no-repeat;
+  background-size: 104px 259px, 253px 66px, 110px 116px;
+  background-position: top right, bottom center, 0px 111px;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .footer {
+    background-image: url("../images/backgrounds/background-footer-mob-right-960w.jpg"), url("../images/backgrounds/background-footer-mob-bottom-960w.jpg"), url("../images/backgrounds/background-footer-mob-left-960w.jpg");
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    background-image: url("../images/backgrounds/background-footer-tab-right-768w.jpg"), url("../images/backgrounds/background-footer-tab-bottom-768w.jpg");
+    background-size: 203px 365px, 100%;
+    background-position: right top, bottom;
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .footer {
+    background-image: url("../images/backgrounds/background-footer-tab-1536w.jpg");
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer {
+    background-image: url("../images/backgrounds/background-footer-desk-1280w.jpg");
+    background-size: 1211px 266px;
+    background-position: bottom center;
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .footer {
+    background-image: url("../images/backgrounds/background-footer-desk-2560w.jpg");
+  }
 }
 
 .footer__container {
-  background-image: url("../images/footer/background-footer-mob-480w.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
   margin-left: auto;
   margin-right: auto;
   padding-top: 60px;
@@ -1525,34 +1554,10 @@ p {
     padding-right: var(--padding-v-desk);
   }
 }
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .footer__container {
-    background-image: url("../images/footer/background-footer-mob-960w.png");
-  }
-}
 @media screen and (min-width: 768px) {
   .footer__container {
-    background-image: url("../images/footer/background-footer-tab-768w.png");
     padding-top: 100px;
     padding-bottom: 100px;
-    background-position: bottom right;
-  }
-}
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
-  .footer__container {
-    background-image: url("../images/footer/background-footer-tab-1536w.png");
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__container {
-    background-image: url("../images/footer/background-footer-desk-1280w.png");
-    background-size: contain;
-    background-position: bottom;
-  }
-}
-@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
-  .footer__container {
-    background-image: url("../images/footer/background-footer-desk-2560w.png");
   }
 }
 
