@@ -13,22 +13,63 @@
 		pageBody.classList.toggle("no-scroll");
 	});
 
-const anchors = document.querySelectorAll('a[href^="#"]')
+	const anchors = document.querySelectorAll('a[href^="#"]')
 
-for(let anchor of anchors) {
-  anchor.addEventListener("click", function(e) {
-    e.preventDefault() 
+	for (let anchor of anchors) {
+		anchor.addEventListener("click", function (e) {
+			e.preventDefault()
     
-    const goto = anchor.hasAttribute('href') ? anchor.getAttribute('href') : 'body'
+			const goto = anchor.hasAttribute('href') ? anchor.getAttribute('href') : 'body'
     
-    document.querySelector(goto).scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    })
-  })
+			document.querySelector(goto).scrollIntoView({
+				behavior: "smooth",
+				block: "start"
+			})
+		})
+	}
+	
+	if (mobileMenuRef && menuBtnRef) {
+	
+	mobileMenuRef.querySelectorAll('.menu__item').forEach(link => {
+		link.addEventListener('click', () => {
+			mobileMenuRef.classList.remove('is-open')
+			menuBtnRef.classList.remove('is-open')
+		})
+	})
 }
 })();
+
+// const menu = document.querySelector('.menu__body')
+// const menuBtn = document.querySelector('.menu__icon')
+
+// const body = document.body;
+
+// if (menu && menuBtn) {
+// 	menuBtn.addEventListener('click', e => {
+// 		menu.classList.toggle('active')
+// 		menuBtn.classList.toggle('active')
+// 		body.classList.toggle('lock')
+// 	})
+
+// 	menu.addEventListener('click', e => {
+// 		if (e.target.classList.contains('menu__body')) {
+// 			menu.classList.remove('active')
+// 			menuBtn.classList.remove('active')
+// 			body.classList.remove('lock')
+// 		}
+// 	})
+
+// 	menu.querySelectorAll('.menu__link').forEach(link => {
+// 		link.addEventListener('click', () => {
+// 			menu.classList.remove('active')
+// 			menuBtn.classList.remove('active')
+// 			body.classList.remove('lock')
+// 		})
+// 	})
+// }
+
 //  мои попытки сделать норм закрытие меню,тут 3 варианта
+
 // var block = document.getElementById('menuList');
 
 // document.addEventListener('click', function(e) {
