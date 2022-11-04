@@ -21,16 +21,18 @@
     }
 
     @include mq(tab) {
-        background-image: url('../images/backgrounds/background-footer-tab-right-768w.jpg'), url('../images/backgrounds/background-footer-tab-bottom-768w.jpg');
-        background-size: 203px 365px, 100%;
-        background-position: right top, bottom;
+        background-image: url('../images/backgrounds/background-footer-tab-right-768w.jpg'),
+            url('../images/backgrounds/background-footer-tab-bottom-768w.jpg');
+        background-size: 203px 365px, 785px 506px;
+        background-position: right top, bottom center;
 
 
 
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
-            background-image: url("../images/backgrounds/background-footer-tab-1536w.jpg");
+            background-image: url('../images/backgrounds/background-footer-tab-right-1536w.jpg'),
+                url('../images/backgrounds/background-footer-tab-bottom-1536w.jpg');
         }
     }
 
