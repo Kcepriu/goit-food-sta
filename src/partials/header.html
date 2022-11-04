@@ -2,7 +2,12 @@
   <div class="header__container">
     <div class="header__logo">
       <a lang="en" href="./index.html">
-        <img class="header__logo-img" src="./images/logo.png" alt="logo" />
+        <img
+          class="header__logo-img"
+          srcset="./images/logo.png 1x, ./images/logo2x.png 2x"
+          src="./images/logo.png"
+          alt="logo"
+        />
       </a>
     </div>
     <nav class="navigation">
@@ -35,12 +40,7 @@
       aria-controls="menu"
       data-menu-button
     >
-      <svg
-        class="menu__burger"
-        width="40"
-        height="70"
-        aria-label="mob menu"
-      >
+      <svg class="menu__burger" width="40" height="70" aria-label="mob menu">
         <use
           class="menu__icon-burger"
           href="./images/icons.svg#icon-menu-burger"

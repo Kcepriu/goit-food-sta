@@ -78,7 +78,6 @@
     @include mq(tab) {
         display: flex;
     }
-
 }
 
 .customers__item {
@@ -116,7 +115,7 @@
 }
 
 .customers__list--icon-star {
-    fill: #FFE550;
+    fill: var(--bnt-background-yellow);
 }
 
 .customers__item--text {
