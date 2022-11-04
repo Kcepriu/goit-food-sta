@@ -52,10 +52,14 @@
   flex-wrap: wrap;
   gap: 20px;
 
-  width: 280px;
+  width: 100%;
 
   margin-right: auto;
   margin-left: auto;
+
+  @media screen and (min-width: 320px) {
+    width: 280px;
+  }
 
   @include mq(tab) {
     width: 704px;
@@ -88,9 +92,6 @@
 
   display: block;
 
-  width: 280px;
-  height: 282px;
-
   border: 11px solid var(--bnt-background-yellow);
   border-radius: 139.305px;
   background: var(--background-circles);
@@ -100,8 +101,13 @@
   transition-duration: var(--duration-primary);
   transition-timing-function: var(--timing-function-primary);
 
+  width: 100%;
+
+  @media screen and (min-width: 320px) {
+    height: 282px;
+  }
+
   @include mq(tab) {
-    width: 100%;
     height: 338px;
     border: 14px solid var(--bnt-background-yellow);
     border-radius: 167.59px;
@@ -151,4 +157,9 @@
       }
     }
   }
+}
+
+.favorites__img {
+  @include img();
+  width: 100%;
 }
