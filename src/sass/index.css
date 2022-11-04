@@ -51,9 +51,16 @@ p {
 .header {
   background-color: var(--background-second);
   position: fixed;
+  left: 0;
+  top: 0;
+  height: 72px;
   width: 100%;
   z-index: 40;
   box-shadow: var(--box-shadow-header);
+  transition: transform 0.1s linear;
+}
+.header.hide {
+  transform: translateY(-72px);
 }
 
 .header__container {
@@ -63,6 +70,7 @@ p {
   padding-right: var(--padding-v-mob);
   width: 100%;
   position: relative;
+  width: 100%;
   z-index: 1;
   margin-left: auto;
   margin-right: auto;
@@ -71,7 +79,6 @@ p {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 72px;
   padding: 10px 20px;
 }
 @media screen and (min-width: 480px) {
@@ -276,11 +283,6 @@ p {
     padding-right: var(--padding-v-desk);
   }
 }
-@media screen and (max-width: 767.98px) {
-  .hero__container {
-    align-items: center;
-  }
-}
 @media screen and (min-width: 768px) {
   .hero__container {
     flex-direction: row;
@@ -300,7 +302,6 @@ p {
 @media screen and (max-width: 767.98px) {
   .hero__title {
     margin-bottom: 28px;
-    max-width: 280px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -332,7 +333,6 @@ p {
 @media screen and (max-width: 767.98px) {
   .hero__text {
     margin-bottom: 28px;
-    max-width: 280px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -414,6 +414,12 @@ p {
   display: block;
   box-sizing: inherit;
   width: 100%;
+}
+@media screen and (min-width: 1280px) {
+  .hero .hero-svg {
+    width: 16px;
+    height: 30px;
+  }
 }
 .hero .btn-slide__left {
   position: absolute;
@@ -1169,7 +1175,7 @@ p {
 }
 
 .customers__list--icon-star {
-  fill: #FFE550;
+  fill: var(--bnt-background-yellow);
 }
 
 .customers__item--text {
@@ -1503,12 +1509,12 @@ p {
   .footer {
     background-image: url("../images/backgrounds/background-footer-tab-right-768w.jpg"), url("../images/backgrounds/background-footer-tab-bottom-768w.jpg");
     background-size: 203px 365px, 100%;
-    background-position: right top, bottom;
+    background-position: right top, bottom center;
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .footer {
-    background-image: url("../images/backgrounds/background-footer-tab-1536w.jpg");
+    background-image: url("../images/backgrounds/background-footer-tab-right-1536w.jpg"), url("../images/backgrounds/background-footer-tab-bottom-1536w.jpg");
   }
 }
 @media screen and (min-width: 1280px) {
