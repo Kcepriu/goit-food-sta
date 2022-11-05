@@ -14,7 +14,7 @@
 }
 
 .subscribe_container {
-    @include container;
+    @extend .container;
 }
 
 .subscribe__title {

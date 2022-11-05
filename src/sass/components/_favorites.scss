@@ -9,7 +9,7 @@
 }
 
 .favorites__container {
-  @include container;
+  @extend .container;
 }
 
 .favorites__title {

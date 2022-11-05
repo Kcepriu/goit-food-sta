@@ -54,13 +54,9 @@
 }
 
 .footer__container {
-
-    margin-left: auto;
-    margin-right: auto;
+    @extend .container;
     padding-top: 60px;
     padding-bottom: 60px;
-
-    @include container();
 
     @include mq(tab) {
         padding-top: 100px;
@@ -120,10 +116,6 @@
     }
 
 
-
-
-
-
     .navigation__list {
 
         @include mq(desk) {
@@ -137,11 +129,7 @@
 }
 
 
-
-
-
 // footer form-nav container
-
 .footer-nav-form__container {
     @include mq(desk) {
         display: flex;
@@ -150,23 +138,8 @@
 }
 
 
-
-
-
-
 // form
-
-
-
-
-
-
-
-
-
-
 .footer-form {
-
 
     @include mq(desk) {
         margin-left: auto;
@@ -218,8 +191,6 @@
 
     & .subscribe__button {
         height: 42px;
-
-
 
         background-color: var(--background-primary);
         border: 0.854167px solid var(--btn-border);
@@ -330,7 +301,5 @@
             color: var(--bnt-background-green);
         }
     }
-
-
 
 }
