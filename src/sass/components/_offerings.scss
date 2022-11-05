@@ -188,7 +188,6 @@
 
 .offerings__item--rocket {
   @include mq(desk) {
-    width: 253px;
     margin-top: 28px;
 
     @include mq(tab) {
@@ -198,7 +197,6 @@
 }
 
 .offerings__item--touch-app {
-  width: 253px;
   margin-top: 28px;
 
   @include mq(tab) {
