@@ -1,6 +1,5 @@
 .hero {
   padding-top: 132px; //60
-  // padding-bottom: 50px;
 
   @include mq(desk) {
     padding-top: 86px; //14
@@ -8,11 +7,10 @@
 
 
   &__container {
-    @include container();
+    @extend .container;
+
     display: flex;
     flex-direction: column;
-
-
 
     @include mq(tab) {
       flex-direction: row;
@@ -63,7 +61,7 @@
 
     @include mq(mob-only) {
       margin-bottom: 28px;
-    
+
     }
 
     @include mq(tab) {
@@ -141,24 +139,22 @@
   }
 
   .image-slider__image {
-
     justify-content: center;
     align-items: center;
   }
 
   .img {
-    display: block;
+    @include img;
     box-sizing: inherit;
     width: 100%;
-
   }
 
-  .hero-svg { 
+  .hero-svg {
     @include mq(desk) {
-    width: 16px;
-    height: 30px;
+      width: 16px;
+      height: 30px;
     }
- }
+  }
 
 
   .btn-slide__left {
@@ -178,16 +174,12 @@
     &:active {
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
     }
- 
-
 
     @include mq(tab) {
       padding: 4px 9px;
       width: 34px;
       height: 28px;
       left: -11;
-
-     
     }
 
     @include mq(desk) {
@@ -238,8 +230,6 @@
       &:hover {
         fill: var(--btn-border);
       }
-
     }
   }
-
 }

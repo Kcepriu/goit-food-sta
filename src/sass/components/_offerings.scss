@@ -48,7 +48,8 @@
 }
 
 .offerings__container {
-  @include container();
+  @extend .container;
+
   display: flex;
   flex-direction: column;
   align-items: center;
