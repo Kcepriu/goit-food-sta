@@ -119,7 +119,7 @@
   // }
 
   @include mq(desk) {
-    max-width: 573px;
+    // max-width: 573px;
     margin-left: 90px;
     margin-right: 0;
     padding-top: 83px;
@@ -127,7 +127,7 @@
 }
 
 .offerings__title {
-  max-width: 280px;
+  // max-width: 280px;
   font-weight: 700;
   font-size: 28px;
   line-height: 1.17;
@@ -143,12 +143,13 @@
   }
 
   @include mq(desk) {
+    width: 100%;
     line-height: 1.2;
   }
 }
 
 .offerings__text {
-  max-width: 272px;
+  // max-width: 272px;
   font-size: 14px;
   line-height: 1.14;
   color: var(--text-color-primary);
@@ -248,12 +249,13 @@
 }
 
 .offerings__pretext {
-  max-width: 252px;
+  // max-width: 252px;
   font-size: 14px;
   line-height: 1.19;
   color: var(--text-color-primary);
 
   @include mq(tab) {
+    max-width: 252px;
     margin: 0;
   }
 
