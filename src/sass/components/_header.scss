@@ -1,39 +1,33 @@
 .header {
+    @include section;
+
     background-color: var(--background-second);
     position: fixed;
     left: 0;
     top: 0;
     height: 72px;
-    width: 100%;
     z-index: 40;
     box-shadow: var(--box-shadow-header);
     transition: transform .1s linear;
 
-    &.hide{
+    &.hide {
         transform: translateY(-72px)
     }
 }
 
 .header__container {
-    @include container;
+    @extend .container;
+
     position: relative;
-    width: 100%;
     z-index: 1;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1280px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    padding: 10px 20px;
 
     @include mq(tab) {
-        padding: 10px 32px;
-    }
-
-    @include mq(desk) {
-        padding: 10px 16px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
 
@@ -166,7 +160,6 @@
         transition-property: all;
         transition-duration: var(--duration-primary);
         transition-timing-function: var(--timing-function-primary);
-
     }
 
     &__button.is-open .menu__icon-burger {
@@ -175,6 +168,8 @@
 
     &__icon-burger {
         fill: var(--btn-border);
+        width: 40px;
+        height: 70px;
     }
 
     &__icon-cross {
