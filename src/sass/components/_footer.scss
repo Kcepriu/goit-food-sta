@@ -194,7 +194,8 @@
 
         background-color: var(--background-primary);
         border: 0.854167px solid var(--btn-border);
-        transition: background-color var(--duration-time) var(--timing-function-primary);
+
+        transition: background-color var(--duration-primary) var(--timing-function-primary);
 
         &:hover,
         &:focus,
@@ -237,8 +238,6 @@
 
 
 // footer list
-
-
 .footer {
 
 
@@ -288,6 +287,8 @@
         font-size: 10px;
         line-height: 1.2;
         color: var(--btn-border);
+
+        transition: color var(--duration-primary) var(--timing-function-primary);
 
         @include mq(tab) {
             font-size: 12px;

@@ -69,7 +69,6 @@
 
   @include mq(tab) {
     padding-top: 0;
-    // margin-top: 70px;
   }
 }
 
@@ -115,10 +114,6 @@
 .offerings__wrap {
   padding-top: 60px;
 
-  // @include mq(tab) {
-  //   padding-top: 60px;
-  // }
-
   @include mq(desk) {
     // max-width: 573px;
     margin-left: 90px;
@@ -128,12 +123,10 @@
 }
 
 .offerings__title {
-  // max-width: 280px;
   font-weight: 700;
   font-size: 28px;
   line-height: 1.17;
   color: var(--text-color-primary);
-  // margin-top: 60px;
   margin-bottom: 28px;
 
   @include mq(tab) {
@@ -151,7 +144,6 @@
 }
 
 .offerings__text {
-  // max-width: 272px;
   font-size: 14px;
   line-height: 1.14;
   color: var(--text-color-primary);
@@ -226,16 +218,11 @@
 .offerings__item--rocket::before {
   @include offerings-item-before();
   background-image: url('../images/offerings/offerings-rocket.svg');
-
-
-
 }
 
 .offerings__item--touch-app::before {
   @include offerings-item-before();
   background-image: url('../images/offerings/offerings-touch.svg');
-
-
 
   @include mq(tab) {
     margin-top: 0;
@@ -251,7 +238,6 @@
 }
 
 .offerings__pretext {
-  // max-width: 252px;
   font-size: 14px;
   line-height: 1.19;
   color: var(--text-color-primary);
@@ -283,6 +269,8 @@
 
   cursor: pointer;
 
+  transition: border-color var(--duration-primary) var(--timing-function-primary);
+
   @include mq(tab) {
     margin-top: 37px;
   }
@@ -295,6 +283,7 @@
 .offerings__btn:hover,
 .offerings__btn:focus {
   border: 2px solid var(--btn-border-acent);
+
 }
 
 .offerings__button {
@@ -309,6 +298,7 @@
   margin-left: 24px;
 
   cursor: pointer;
+  transition: color var(--duration-primary) var(--timing-function-primary);
 
   @include mq(desk) {
     display: none;
