@@ -21,6 +21,4 @@ To install Food-Sta , follow these steps:
    `git@github.com:Kcepriu/goit-food-sta.git`
 2. Navigate to the project directory using `cd goit-food-sta`.
 3. Install dependencies using `npm install`.
-4. Start the server using
-
-- $ npm start
+4. Start the server using `npm start`
