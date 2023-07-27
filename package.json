@@ -1,7 +1,7 @@
 {
-  "name": "parcel-project-template",
+  "name": "food-sta-project",
   "version": "2.0.0",
-  "description": "",
+  "description": "Team food ordering project",
   "homepage": "https://kcepriu.github.io/goit-food-sta",
   "scripts": {
     "start": "parcel src/*.html",
